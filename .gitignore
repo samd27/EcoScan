@@ -1,0 +1,21 @@
+# Archivos y carpetas de Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/[Uu]serSettings/
+
+# Autogenerados por el Editor
+*.sln
+*.csproj
+*.userprefs
+
+# Archivos de builds
+*.apk
+*.aab
+*.exe
+*.app

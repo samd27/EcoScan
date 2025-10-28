@@ -1,0 +1,253 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RewardItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\RewardItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\GlobalPointsManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GlobalPointsManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RecompensasManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\RecompensasManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\BtnDesvanecimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\BtnDesvanecimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\AjustarPantalla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\AjustarPantalla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ScanARPoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ScanARPoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\MainMenuManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\MainMenuManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\BotonSumarPuntos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\BotonSumarPuntos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\EventManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\EventManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ARButtonActions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ARButtonActions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\CarruselManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\CarruselManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\ScrollRect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\ScrollRect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ModeloController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ModeloController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ModeloViewerManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ModeloViewerManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BtnDesvanecimiento.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\BtnDesvanecimiento.cs",
+              "RelativeDocumentMoniker": "Assets\\BtnDesvanecimiento.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\BtnDesvanecimiento.cs",
+              "RelativeToolTip": "Assets\\BtnDesvanecimiento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T17:57:59.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AjustarPantalla.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\AjustarPantalla.cs",
+              "RelativeDocumentMoniker": "Assets\\AjustarPantalla.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\AjustarPantalla.cs",
+              "RelativeToolTip": "Assets\\AjustarPantalla.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAkwC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T01:26:54.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecompensasManager.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RecompensasManager.cs",
+              "RelativeDocumentMoniker": "Assets\\RecompensasManager.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RecompensasManager.cs",
+              "RelativeToolTip": "Assets\\RecompensasManager.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T22:05:37.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ScanARPoints.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ScanARPoints.cs",
+              "RelativeDocumentMoniker": "Assets\\ScanARPoints.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ScanARPoints.cs",
+              "RelativeToolTip": "Assets\\ScanARPoints.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T22:00:50.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GlobalPointsManager.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\GlobalPointsManager.cs",
+              "RelativeDocumentMoniker": "Assets\\GlobalPointsManager.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\GlobalPointsManager.cs",
+              "RelativeToolTip": "Assets\\GlobalPointsManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T21:59:25.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BotonSumarPuntos.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\BotonSumarPuntos.cs",
+              "RelativeDocumentMoniker": "Assets\\BotonSumarPuntos.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\BotonSumarPuntos.cs",
+              "RelativeToolTip": "Assets\\BotonSumarPuntos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T20:31:05.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RewardItem.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RewardItem.cs",
+              "RelativeDocumentMoniker": "Assets\\RewardItem.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RewardItem.cs",
+              "RelativeToolTip": "Assets\\RewardItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T20:20:21.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ModeloViewerManager.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ModeloViewerManager.cs",
+              "RelativeDocumentMoniker": "Assets\\ModeloViewerManager.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ModeloViewerManager.cs",
+              "RelativeToolTip": "Assets\\ModeloViewerManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T04:22:23.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainMenuManager.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\MainMenuManager.cs",
+              "RelativeDocumentMoniker": "Assets\\MainMenuManager.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\MainMenuManager.cs",
+              "RelativeToolTip": "Assets\\MainMenuManager.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T16:35:48.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EventManager.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\EventManager.cs",
+              "RelativeDocumentMoniker": "Assets\\EventManager.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\EventManager.cs",
+              "RelativeToolTip": "Assets\\EventManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T20:27:54.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ModeloController.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ModeloController.cs",
+              "RelativeDocumentMoniker": "Assets\\ModeloController.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ModeloController.cs",
+              "RelativeToolTip": "Assets\\ModeloController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAGUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T04:16:45.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ScrollRect.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\ScrollRect.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\ScrollRect.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\ScrollRect.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\ScrollRect.cs",
+              "ViewState": "AgIAAOwDAAAAAAAAAAAawC4EAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T22:22:46.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CarruselManager.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\CarruselManager.cs",
+              "RelativeDocumentMoniker": "Assets\\CarruselManager.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\CarruselManager.cs",
+              "RelativeToolTip": "Assets\\CarruselManager.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAwwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T17:45:50.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ARButtonActions.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ARButtonActions.cs",
+              "RelativeDocumentMoniker": "Assets\\ARButtonActions.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ARButtonActions.cs",
+              "RelativeToolTip": "Assets\\ARButtonActions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T04:28:35.863Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
