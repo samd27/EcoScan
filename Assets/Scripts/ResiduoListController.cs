@@ -41,6 +41,7 @@ public class ResiduoListController : MonoBehaviour
     private Text detailsDisposalText;
     private Text detailsDescriptionText;
     private Text detailsHeaderText;
+    private Text detailsHeaderText;
 
     private readonly List<Button> materialOptionButtons = new List<Button>();
 
@@ -49,11 +50,13 @@ public class ResiduoListController : MonoBehaviour
     private bool sortAscending = true;
 
     private const string DefaultMaterialLabel = "Filtros";
+    private const string DefaultMaterialLabel = "Filtros";
 
     private Font defaultFont;
 
     private void Awake()
     {
+        defaultFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
         defaultFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
     }
 
@@ -105,6 +108,7 @@ public class ResiduoListController : MonoBehaviour
         root = CreateRectTransform("ResiduoListRoot", transform as RectTransform);
         var background = root.gameObject.AddComponent<Image>();
         background.color = new Color(0.97f, 0.96f, 0.99f);
+        background.color = new Color(0.97f, 0.96f, 0.99f);
 
         BuildHeader();
         BuildSearchBar();
@@ -112,6 +116,7 @@ public class ResiduoListController : MonoBehaviour
         BuildMaterialPanel();
         BuildScrollView();
         BuildDetailsOverlay();
+        UpdateCategoryButtonVisuals();
         UpdateCategoryButtonVisuals();
     }
 
@@ -123,22 +128,33 @@ public class ResiduoListController : MonoBehaviour
         header.pivot = new Vector2(0.5f, 1f);
         header.anchoredPosition = Vector2.zero;
         header.sizeDelta = new Vector2(0f, 160f);
+        header.sizeDelta = new Vector2(0f, 160f);
 
         var headerBackground = header.gameObject.AddComponent<Image>();
         headerBackground.color = new Color(0.95f, 0.95f, 0.99f);
+        headerBackground.color = new Color(0.95f, 0.95f, 0.99f);
 
+        var backButton = CreateButton("BackButton", header, new Vector2(88f, 88f));
         var backButton = CreateButton("BackButton", header, new Vector2(88f, 88f));
         backButton.anchorMin = new Vector2(0f, 1f);
         backButton.anchorMax = new Vector2(0f, 1f);
         backButton.pivot = new Vector2(0f, 1f);
         backButton.anchoredPosition = new Vector2(40f, -44f);
+        backButton.anchoredPosition = new Vector2(40f, -44f);
         var backImage = backButton.GetComponent<Image>();
         backImage.color = new Color(0.9f, 0.9f, 0.9f);
+        var backLabel = CreateTextElement("Label", backButton, "←", 48, FontStyle.Bold);
         var backLabel = CreateTextElement("Label", backButton, "←", 48, FontStyle.Bold);
         backLabel.alignment = TextAnchor.MiddleCenter;
         var back = backButton.GetComponent<Button>();
         back.onClick.AddListener(() => SceneManager.LoadScene(mainMenuSceneName));
 
+        var title = CreateTextElement("Title", header, "Listado de productos", 44, FontStyle.Bold);
+        title.alignment = TextAnchor.MiddleCenter;
+        title.color = new Color(0.21f, 0.24f, 0.32f);
+        var titleRect = title.rectTransform;
+        titleRect.offsetMin = new Vector2(140f, 36f);
+        titleRect.offsetMax = new Vector2(-140f, -36f);
         var title = CreateTextElement("Title", header, "Listado de productos", 44, FontStyle.Bold);
         title.alignment = TextAnchor.MiddleCenter;
         title.color = new Color(0.21f, 0.24f, 0.32f);
@@ -155,6 +171,8 @@ public class ResiduoListController : MonoBehaviour
         container.pivot = new Vector2(0.5f, 1f);
         container.anchoredPosition = new Vector2(0f, -188f);
         container.sizeDelta = new Vector2(0f, 96f);
+        container.anchoredPosition = new Vector2(0f, -188f);
+        container.sizeDelta = new Vector2(0f, 96f);
 
         var searchObject = new GameObject("InputField", typeof(RectTransform), typeof(Image), typeof(InputField));
         var searchRect = searchObject.GetComponent<RectTransform>();
@@ -164,6 +182,7 @@ public class ResiduoListController : MonoBehaviour
         searchRect.offsetMin = Vector2.zero;
         searchRect.offsetMax = Vector2.zero;
         var searchImage = searchObject.GetComponent<Image>();
+        searchImage.color = new Color(0.97f, 0.97f, 1f);
         searchImage.color = new Color(0.97f, 0.97f, 1f);
         searchImage.raycastTarget = true;
 
@@ -196,6 +215,7 @@ public class ResiduoListController : MonoBehaviour
     private void BuildFilters()
     {
         var filterRow = new GameObject("FilterRow", typeof(RectTransform), typeof(Image), typeof(HorizontalLayoutGroup));
+        var filterRow = new GameObject("FilterRow", typeof(RectTransform), typeof(Image), typeof(HorizontalLayoutGroup));
         var filterRect = filterRow.GetComponent<RectTransform>();
         filterRect.SetParent(root, false);
         filterRect.anchorMin = new Vector2(0f, 1f);
@@ -207,8 +227,15 @@ public class ResiduoListController : MonoBehaviour
         var filterBackground = filterRow.GetComponent<Image>();
         filterBackground.color = new Color(0.97f, 0.97f, 1f);
         filterBackground.raycastTarget = true;
+        filterRect.anchoredPosition = new Vector2(0f, -300f);
+        filterRect.sizeDelta = new Vector2(0f, 96f);
+
+        var filterBackground = filterRow.GetComponent<Image>();
+        filterBackground.color = new Color(0.97f, 0.97f, 1f);
+        filterBackground.raycastTarget = true;
 
         var layout = filterRow.GetComponent<HorizontalLayoutGroup>();
+        layout.padding = new RectOffset(40, 40, 16, 16);
         layout.padding = new RectOffset(40, 40, 16, 16);
         layout.spacing = 20f;
         layout.childAlignment = TextAnchor.MiddleLeft;
@@ -217,7 +244,7 @@ public class ResiduoListController : MonoBehaviour
         layout.childControlHeight = false;
         layout.childControlWidth = false;
 
-        sortButton = CreatePillButton("A-Z", filterRect, new Color(0.86f, 0.9f, 0.99f));
+        sortButton = CreatePillButton("A-Z", filterRect, new Color(0.21f, 0.48f, 0.82f));
         var sortLayout = sortButton.GetComponent<LayoutElement>();
         sortLayout.minWidth = 140f;
         sortLayout.preferredWidth = 160f;
@@ -232,19 +259,19 @@ public class ResiduoListController : MonoBehaviour
         sortButtonText.horizontalOverflow = HorizontalWrapMode.Overflow;
         UpdateSortButtonLabel();
 
-        organicButton = CreatePillButton("Orgánico", filterRect, new Color(0.82f, 0.93f, 0.85f));
+        organicButton = CreatePillButton("Orgánico", filterRect, new Color(0.13f, 0.64f, 0.42f));
         organicButton.onClick.AddListener(() => ToggleCategory("ORGANICO"));
         var organicLayout = organicButton.GetComponent<LayoutElement>();
         organicLayout.minWidth = 180f;
         organicLayout.preferredWidth = 200f;
 
-        inorganicButton = CreatePillButton("Inorgánico", filterRect, new Color(0.84f, 0.9f, 0.97f));
+        inorganicButton = CreatePillButton("Inorgánico", filterRect, new Color(0.23f, 0.46f, 0.82f));
         inorganicButton.onClick.AddListener(() => ToggleCategory("INORGANICO"));
         var inorganicLayout = inorganicButton.GetComponent<LayoutElement>();
         inorganicLayout.minWidth = 200f;
         inorganicLayout.preferredWidth = 220f;
 
-        materialButton = CreatePillButton(DefaultMaterialLabel, filterRect, new Color(0.93f, 0.93f, 0.96f));
+        materialButton = CreatePillButton(DefaultMaterialLabel, filterRect, new Color(0.84f, 0.36f, 0.64f));
         materialButton.interactable = false;
         materialButton.onClick.AddListener(ToggleMaterialPanel);
         materialButtonText = materialButton.GetComponentInChildren<Text>();
@@ -253,6 +280,9 @@ public class ResiduoListController : MonoBehaviour
         materialButtonText.resizeTextForBestFit = true;
         materialButtonText.resizeTextMinSize = 18;
         materialButtonText.resizeTextMaxSize = materialButtonText.fontSize;
+        var materialLayout = materialButton.GetComponent<LayoutElement>();
+        materialLayout.minWidth = 200f;
+        materialLayout.preferredWidth = 240f;
         var materialLayout = materialButton.GetComponent<LayoutElement>();
         materialLayout.minWidth = 200f;
         materialLayout.preferredWidth = 240f;
@@ -287,11 +317,13 @@ public class ResiduoListController : MonoBehaviour
         materialPanel.anchorMax = new Vector2(0.5f, 0.5f);
         materialPanel.pivot = new Vector2(0.5f, 0.5f);
         materialPanel.sizeDelta = new Vector2(620f, 820f);
+        materialPanel.sizeDelta = new Vector2(620f, 820f);
         var panelImage = materialPanel.GetComponent<Image>();
         panelImage.color = Color.white;
 
         var panelLayout = materialPanel.gameObject.AddComponent<VerticalLayoutGroup>();
         panelLayout.padding = new RectOffset(36, 36, 36, 36);
+        panelLayout.spacing = 24f;
         panelLayout.spacing = 24f;
         panelLayout.childAlignment = TextAnchor.UpperCenter;
         panelLayout.childControlWidth = true;
@@ -299,6 +331,7 @@ public class ResiduoListController : MonoBehaviour
         panelLayout.childControlHeight = false;
         panelLayout.childForceExpandHeight = false;
 
+        var closeButton = CreatePillButton("Cerrar", materialPanel, new Color(0.92f, 0.92f, 0.95f));
         var closeButton = CreatePillButton("Cerrar", materialPanel, new Color(0.92f, 0.92f, 0.95f));
         var closeRect = closeButton.GetComponent<RectTransform>();
         closeRect.SetSiblingIndex(0);
@@ -317,7 +350,9 @@ public class ResiduoListController : MonoBehaviour
         }
 
         var title = CreateTextElement("Title", materialPanel, "Materiales disponibles", 40, FontStyle.Bold);
+        var title = CreateTextElement("Title", materialPanel, "Materiales disponibles", 40, FontStyle.Bold);
         title.alignment = TextAnchor.MiddleCenter;
+        title.color = new Color(0.18f, 0.22f, 0.32f);
         title.color = new Color(0.18f, 0.22f, 0.32f);
         var titleLayout = title.gameObject.AddComponent<LayoutElement>();
         titleLayout.preferredHeight = 80f;
@@ -392,8 +427,10 @@ public class ResiduoListController : MonoBehaviour
         scrollRectTransform.anchorMax = new Vector2(1f, 1f);
         scrollRectTransform.offsetMin = new Vector2(40f, 40f);
         scrollRectTransform.offsetMax = new Vector2(-40f, -440f);
+        scrollRectTransform.offsetMax = new Vector2(-40f, -440f);
 
         var scrollBackground = scrollGO.GetComponent<Image>();
+        scrollBackground.color = new Color(0.98f, 0.98f, 1f);
         scrollBackground.color = new Color(0.98f, 0.98f, 1f);
 
         scrollRect = scrollGO.GetComponent<ScrollRect>();
@@ -401,11 +438,17 @@ public class ResiduoListController : MonoBehaviour
         scrollRect.vertical = true;
         scrollRect.movementType = ScrollRect.MovementType.Elastic;
 
+        var scrollLayout = scrollGO.AddComponent<LayoutElement>();
+        scrollLayout.preferredHeight = 0f;
+        scrollLayout.flexibleHeight = 1f;
+
         var viewport = new GameObject("Viewport", typeof(RectTransform), typeof(Image), typeof(Mask));
         var viewportRect = viewport.GetComponent<RectTransform>();
         viewportRect.SetParent(scrollRectTransform, false);
         viewportRect.anchorMin = new Vector2(0f, 0f);
         viewportRect.anchorMax = new Vector2(1f, 1f);
+        viewportRect.offsetMin = new Vector2(12f, 12f);
+        viewportRect.offsetMax = new Vector2(-12f, -12f);
         viewportRect.offsetMin = new Vector2(12f, 12f);
         viewportRect.offsetMax = new Vector2(-12f, -12f);
         var maskImage = viewport.GetComponent<Image>();
@@ -422,6 +465,8 @@ public class ResiduoListController : MonoBehaviour
         content.anchoredPosition = Vector2.zero;
 
         var grid = content.GetComponent<GridLayoutGroup>();
+        grid.cellSize = new Vector2(300f, 340f);
+        grid.spacing = new Vector2(24f, 28f);
         grid.cellSize = new Vector2(300f, 340f);
         grid.spacing = new Vector2(24f, 28f);
         grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
@@ -447,6 +492,7 @@ public class ResiduoListController : MonoBehaviour
         overlayRect.offsetMax = Vector2.zero;
         var overlayImage = detailsOverlay.GetComponent<Image>();
         overlayImage.color = new Color(0f, 0f, 0f, 0.55f);
+        overlayImage.color = new Color(0f, 0f, 0f, 0.55f);
         overlayImage.raycastTarget = true;
 
         var overlayButton = detailsOverlay.AddComponent<Button>();
@@ -456,15 +502,18 @@ public class ResiduoListController : MonoBehaviour
         detailsOverlay.SetActive(false);
 
         var panel = new GameObject("Panel", typeof(RectTransform), typeof(Image), typeof(VerticalLayoutGroup));
+        var panel = new GameObject("Panel", typeof(RectTransform), typeof(Image), typeof(VerticalLayoutGroup));
         var panelRect = panel.GetComponent<RectTransform>();
         panelRect.SetParent(overlayRect, false);
         panelRect.anchorMin = new Vector2(0.5f, 0.5f);
         panelRect.anchorMax = new Vector2(0.5f, 0.5f);
         panelRect.pivot = new Vector2(0.5f, 0.5f);
         panelRect.sizeDelta = new Vector2(700f, 940f);
+        panelRect.sizeDelta = new Vector2(700f, 940f);
         var panelImage = panel.GetComponent<Image>();
         panelImage.color = Color.white;
 
+        var panelLayout = panel.GetComponent<VerticalLayoutGroup>();
         var panelLayout = panel.GetComponent<VerticalLayoutGroup>();
         panelLayout.padding = new RectOffset(40, 40, 40, 40);
         panelLayout.spacing = 20f;
@@ -488,7 +537,7 @@ public class ResiduoListController : MonoBehaviour
 
         detailsHeaderText = CreateTextElement("Header", headerRect, "Ficha técnica", 36, FontStyle.Bold);
         detailsHeaderText.alignment = TextAnchor.MiddleLeft;
-        detailsHeaderText.color = new Color(0.2f, 0.24f, 0.32f);
+        detailsHeaderText.color = Color.black;
         var headerTitleLayout = detailsHeaderText.gameObject.AddComponent<LayoutElement>();
         headerTitleLayout.minWidth = 0f;
 
@@ -500,7 +549,14 @@ public class ResiduoListController : MonoBehaviour
         var closeLayout = closeButton.GetComponent<LayoutElement>();
         closeLayout.minWidth = 160f;
         closeLayout.preferredWidth = 160f;
+        closeLayout.minWidth = 160f;
+        closeLayout.preferredWidth = 160f;
         closeButton.onClick.AddListener(HideDetails);
+        var closeLabel = closeButton.GetComponentInChildren<Text>();
+        if (closeLabel != null)
+        {
+            closeLabel.alignment = TextAnchor.MiddleCenter;
+        }
         var closeLabel = closeButton.GetComponentInChildren<Text>();
         if (closeLabel != null)
         {
@@ -509,13 +565,13 @@ public class ResiduoListController : MonoBehaviour
 
         detailsNameText = CreateTextElement("Name", panelRect, string.Empty, 42, FontStyle.Bold);
         detailsNameText.alignment = TextAnchor.MiddleCenter;
-        detailsNameText.color = new Color(0.18f, 0.2f, 0.28f);
+        detailsNameText.color = Color.black;
         var nameLayout = detailsNameText.gameObject.AddComponent<LayoutElement>();
         nameLayout.preferredHeight = 72f;
 
         detailsCategoryText = CreateTextElement("Category", panelRect, string.Empty, 30, FontStyle.Bold);
         detailsCategoryText.alignment = TextAnchor.MiddleCenter;
-        detailsCategoryText.color = new Color(0.2f, 0.45f, 0.55f);
+        detailsCategoryText.color = Color.black;
         var categoryLayout = detailsCategoryText.gameObject.AddComponent<LayoutElement>();
         categoryLayout.preferredHeight = 56f;
 
@@ -524,7 +580,7 @@ public class ResiduoListController : MonoBehaviour
         scrollRectTransform.SetParent(panelRect, false);
         var scrollImage = scrollGO.GetComponent<Image>();
         scrollImage.color = new Color(0.97f, 0.97f, 1f);
-        var scrollLayout = scrollGO.GetComponent<LayoutElement>();
+        var scrollLayout = scrollGO.AddComponent<LayoutElement>();
         scrollLayout.preferredHeight = 0f;
         scrollLayout.flexibleHeight = 1f;
 
@@ -570,41 +626,92 @@ public class ResiduoListController : MonoBehaviour
         detailsScroll.viewport = viewportRect;
 
         var imageContainer = new GameObject("Image", typeof(RectTransform), typeof(Image), typeof(AspectRatioFitter), typeof(LayoutElement));
+        var detailsScroll = scrollGO.GetComponent<ScrollRect>();
+        detailsScroll.horizontal = false;
+        detailsScroll.vertical = true;
+        detailsScroll.movementType = ScrollRect.MovementType.Clamped;
+
+        var viewport = new GameObject("Viewport", typeof(RectTransform), typeof(Image), typeof(Mask));
+        var viewportRect = viewport.GetComponent<RectTransform>();
+        viewportRect.SetParent(scrollRectTransform, false);
+        viewportRect.anchorMin = Vector2.zero;
+        viewportRect.anchorMax = Vector2.one;
+        viewportRect.offsetMin = new Vector2(14f, 14f);
+        viewportRect.offsetMax = new Vector2(-14f, -14f);
+        var viewportImage = viewport.GetComponent<Image>();
+        viewportImage.color = Color.white;
+        viewportImage.raycastTarget = true;
+        var viewportMask = viewport.GetComponent<Mask>();
+        viewportMask.showMaskGraphic = false;
+
+        var contentRect = new GameObject("Content", typeof(RectTransform), typeof(VerticalLayoutGroup), typeof(ContentSizeFitter)).GetComponent<RectTransform>();
+        contentRect.SetParent(viewportRect, false);
+        contentRect.anchorMin = new Vector2(0f, 1f);
+        contentRect.anchorMax = new Vector2(1f, 1f);
+        contentRect.pivot = new Vector2(0.5f, 1f);
+        contentRect.anchoredPosition = Vector2.zero;
+
+        var contentLayout = contentRect.GetComponent<VerticalLayoutGroup>();
+        contentLayout.padding = new RectOffset(20, 20, 20, 20);
+        contentLayout.spacing = 18f;
+        contentLayout.childAlignment = TextAnchor.UpperLeft;
+        contentLayout.childControlWidth = true;
+        contentLayout.childForceExpandWidth = true;
+        contentLayout.childControlHeight = false;
+        contentLayout.childForceExpandHeight = false;
+
+        var fitter = contentRect.GetComponent<ContentSizeFitter>();
+        fitter.horizontalFit = ContentSizeFitter.FitMode.Unconstrained;
+        fitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+
+        detailsScroll.content = contentRect;
+        detailsScroll.viewport = viewportRect;
+
+        var imageContainer = new GameObject("Image", typeof(RectTransform), typeof(Image), typeof(AspectRatioFitter), typeof(LayoutElement));
         var imageRect = imageContainer.GetComponent<RectTransform>();
+        imageRect.SetParent(contentRect, false);
         imageRect.SetParent(contentRect, false);
         var aspect = imageContainer.GetComponent<AspectRatioFitter>();
         aspect.aspectMode = AspectRatioFitter.AspectMode.WidthControlsHeight;
         aspect.aspectRatio = 1.2f;
+        var imageLayout = imageContainer.GetComponent<LayoutElement>();
         var imageLayout = imageContainer.GetComponent<LayoutElement>();
         imageLayout.preferredHeight = 0f;
         imageLayout.flexibleHeight = 1f;
         detailsImage = imageContainer.GetComponent<Image>();
         detailsImage.color = new Color(0.9f, 0.9f, 0.9f);
         detailsImage.preserveAspect = true;
+        detailsImage.preserveAspect = true;
 
         detailsMaterialText = CreateTextElement("Material", contentRect, string.Empty, 28, FontStyle.Normal);
-        detailsMaterialText.color = new Color(0.22f, 0.24f, 0.32f);
+        detailsMaterialText.color = Color.black;
         detailsMaterialText.alignment = TextAnchor.UpperLeft;
         detailsMaterialText.horizontalOverflow = HorizontalWrapMode.Wrap;
         detailsMaterialText.verticalOverflow = VerticalWrapMode.Overflow;
         var materialLayout = detailsMaterialText.gameObject.AddComponent<LayoutElement>();
         materialLayout.preferredHeight = 0f;
         materialLayout.flexibleHeight = 0f;
+        materialLayout.preferredHeight = 0f;
+        materialLayout.flexibleHeight = 0f;
 
         detailsDisposalText = CreateTextElement("Disposal", contentRect, string.Empty, 28, FontStyle.Italic);
-        detailsDisposalText.color = new Color(0.18f, 0.36f, 0.58f);
+        detailsDisposalText.color = Color.black;
         detailsDisposalText.alignment = TextAnchor.UpperLeft;
         detailsDisposalText.horizontalOverflow = HorizontalWrapMode.Wrap;
         detailsDisposalText.verticalOverflow = VerticalWrapMode.Overflow;
         var disposalLayout = detailsDisposalText.gameObject.AddComponent<LayoutElement>();
         disposalLayout.preferredHeight = 0f;
+        disposalLayout.preferredHeight = 0f;
 
         detailsDescriptionText = CreateTextElement("Description", contentRect, string.Empty, 26, FontStyle.Normal);
-        detailsDescriptionText.color = new Color(0.24f, 0.24f, 0.24f);
+        detailsDescriptionText.color = Color.black;
         detailsDescriptionText.alignment = TextAnchor.UpperLeft;
         detailsDescriptionText.horizontalOverflow = HorizontalWrapMode.Wrap;
         detailsDescriptionText.verticalOverflow = VerticalWrapMode.Overflow;
+        detailsDescriptionText.verticalOverflow = VerticalWrapMode.Overflow;
         var descriptionLayout = detailsDescriptionText.gameObject.AddComponent<LayoutElement>();
+        descriptionLayout.preferredHeight = 0f;
+        descriptionLayout.flexibleHeight = 0f;
         descriptionLayout.preferredHeight = 0f;
         descriptionLayout.flexibleHeight = 0f;
     }
@@ -625,11 +732,13 @@ public class ResiduoListController : MonoBehaviour
             currentMaterialFilter = null;
             materialButton.interactable = false;
             materialButtonText.text = DefaultMaterialLabel;
+            materialButtonText.text = DefaultMaterialLabel;
             HideMaterialOverlay();
         }
         else
         {
             materialButton.interactable = true;
+            materialButtonText.text = string.IsNullOrEmpty(currentMaterialFilter) ? DefaultMaterialLabel : currentMaterialFilter;
             materialButtonText.text = string.IsNullOrEmpty(currentMaterialFilter) ? DefaultMaterialLabel : currentMaterialFilter;
             UpdateMaterialOptions();
         }
@@ -664,6 +773,11 @@ public class ResiduoListController : MonoBehaviour
 
     private void SetButtonState(Button button, bool active)
     {
+        if (button == null)
+        {
+            return;
+        }
+
         var colors = button.colors;
         baseButtonColors.TryGetValue(button, out var baseColor);
         if (baseColor == default)
@@ -710,8 +824,14 @@ public class ResiduoListController : MonoBehaviour
         var text = button.GetComponentInChildren<Text>();
         if (text != null)
         {
-            text.color = active ? Color.white : new Color(0.2f, 0.2f, 0.2f);
+            text.color = GetReadableTextColor(colors.normalColor);
         }
+    }
+
+    private Color GetReadableTextColor(Color background)
+    {
+        float luminance = 0.2126f * background.r + 0.7152f * background.g + 0.0722f * background.b;
+        return luminance > 0.6f ? new Color(0.1f, 0.1f, 0.1f) : Color.white;
     }
 
     private void UpdateSortButtonLabel()
@@ -770,6 +890,7 @@ public class ResiduoListController : MonoBehaviour
         optionButton.onClick.AddListener(() =>
         {
             currentMaterialFilter = value;
+            materialButtonText.text = string.IsNullOrEmpty(value) ? DefaultMaterialLabel : value;
             materialButtonText.text = string.IsNullOrEmpty(value) ? DefaultMaterialLabel : value;
             HideMaterialOverlay();
             ApplyFilters();
@@ -834,6 +955,8 @@ public class ResiduoListController : MonoBehaviour
             card.data = residuo;
             card.nameText.text = residuo.nombre;
             card.categoryText.text = FormatCategory(residuo);
+            var isOrganic = string.Equals(residuo.categoria, "ORGANICO", StringComparison.OrdinalIgnoreCase);
+            card.categoryText.color = isOrganic ? new Color(0.24f, 0.6f, 0.44f) : new Color(0.28f, 0.45f, 0.75f);
             var isOrganic = string.Equals(residuo.categoria, "ORGANICO", StringComparison.OrdinalIgnoreCase);
             card.categoryText.color = isOrganic ? new Color(0.24f, 0.6f, 0.44f) : new Color(0.28f, 0.45f, 0.75f);
             card.button.onClick.RemoveAllListeners();
@@ -901,6 +1024,7 @@ public class ResiduoListController : MonoBehaviour
 
         var background = cardObject.GetComponent<Image>();
         background.color = new Color(0.95f, 0.95f, 1f);
+        background.color = new Color(0.95f, 0.95f, 1f);
 
         var button = cardObject.GetComponent<Button>();
         var colors = button.colors;
@@ -911,6 +1035,7 @@ public class ResiduoListController : MonoBehaviour
         button.colors = colors;
 
         var layout = cardObject.GetComponent<VerticalLayoutGroup>();
+        layout.padding = new RectOffset(16, 16, 18, 18);
         layout.padding = new RectOffset(16, 16, 18, 18);
         layout.spacing = 12f;
         layout.childAlignment = TextAnchor.UpperCenter;
@@ -934,11 +1059,12 @@ public class ResiduoListController : MonoBehaviour
         aspect.aspectRatio = 1f;
         var thumbnailLayout = thumbnailObject.GetComponent<LayoutElement>();
         thumbnailLayout.preferredHeight = 210f;
+        thumbnailLayout.preferredHeight = 210f;
         thumbnailLayout.flexibleHeight = 1f;
 
         var nameText = CreateTextElement("Name", cardObject.transform, string.Empty, 30, FontStyle.Bold);
         nameText.alignment = TextAnchor.MiddleCenter;
-        nameText.color = new Color(0.2f, 0.2f, 0.25f);
+        nameText.color = Color.black;
         nameText.horizontalOverflow = HorizontalWrapMode.Wrap;
         var nameLayoutElement = nameText.gameObject.AddComponent<LayoutElement>();
         nameLayoutElement.preferredHeight = 72f;
@@ -946,7 +1072,7 @@ public class ResiduoListController : MonoBehaviour
 
         var categoryText = CreateTextElement("Category", cardObject.transform, string.Empty, 26, FontStyle.Normal);
         categoryText.alignment = TextAnchor.MiddleCenter;
-        categoryText.color = new Color(0.3f, 0.35f, 0.4f);
+        categoryText.color = Color.black;
         categoryText.horizontalOverflow = HorizontalWrapMode.Wrap;
         var categoryLayoutElement = categoryText.gameObject.AddComponent<LayoutElement>();
         categoryLayoutElement.preferredHeight = 58f;
@@ -975,7 +1101,15 @@ public class ResiduoListController : MonoBehaviour
         {
             detailsHeaderText.text = "Ficha técnica";
         }
+        if (detailsHeaderText != null)
+        {
+            detailsHeaderText.text = "Ficha técnica";
+        }
         detailsNameText.text = card.data.nombre;
+        var categoryText = FormatCategory(card.data);
+        detailsCategoryText.text = categoryText;
+        var isOrganic = string.Equals(card.data.categoria, "ORGANICO", StringComparison.OrdinalIgnoreCase);
+        detailsCategoryText.color = isOrganic ? new Color(0.22f, 0.58f, 0.42f) : new Color(0.25f, 0.45f, 0.75f);
         var categoryText = FormatCategory(card.data);
         detailsCategoryText.text = categoryText;
         var isOrganic = string.Equals(card.data.categoria, "ORGANICO", StringComparison.OrdinalIgnoreCase);
@@ -1113,7 +1247,7 @@ public class ResiduoListController : MonoBehaviour
 
         var label = CreateTextElement("Label", rect, text, 28, FontStyle.Bold);
         label.alignment = TextAnchor.MiddleCenter;
-        label.color = new Color(0.2f, 0.2f, 0.25f);
+        label.color = GetReadableTextColor(backgroundColor);
         label.horizontalOverflow = HorizontalWrapMode.Overflow;
         label.verticalOverflow = VerticalWrapMode.Truncate;
         label.rectTransform.anchorMin = Vector2.zero;
