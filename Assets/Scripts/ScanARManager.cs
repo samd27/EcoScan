@@ -47,7 +47,7 @@ public class ScanARManager : MonoBehaviour
 
     // --- LÓGICA DEL TEMPORIZADOR Y POP-UPS ---
 
-    // ¡FUNCIÓN ACTUALIZADA! Con el nombre en el título.
+    // ¡FUNCIÓN ACTUALIZADA! "Adicional" ahora es "Recomendación".
     void MostrarPopupExito(string nombreResiduo, string clasificacion, string material, string desechar, string adicional = "")
     {
         if (targetEncontrado) return;
@@ -58,20 +58,19 @@ public class ScanARManager : MonoBehaviour
         contenedorExito.SetActive(true);
         contenedorFallo.SetActive(false);
 
-        // 1. Título (MODIFICADO)
-        // Ahora el título incluye el nombre del residuo
+        // 1. Título
         textoTitulo.text = $"Residuo: {nombreResiduo}"; 
 
-        // 2. Descripción (MODIFICADA)
-        // Eliminamos la línea "Residuo:" de aquí
+        // 2. Descripción
         string descripcionCompleta = $"Tipo: {clasificacion}\n" +
                                      $"Material: {material}\n" +
                                      $"Desechar: {desechar}";
         
-        // 3. Añade "Adicional" SÓLO si no está vacío
+        // 3. Añade la recomendación SÓLO si no está vacía
         if (!string.IsNullOrEmpty(adicional))
         {
-            descripcionCompleta += $"\nAdicional: {adicional}"; 
+            // --- ¡ESTA ES LA LÍNEA MODIFICADA! ---
+            descripcionCompleta += $"\nRecomendación: {adicional}"; 
         }
         
         textoDescripcion.text = descripcionCompleta;
@@ -120,7 +119,6 @@ public class ScanARManager : MonoBehaviour
 
     // ------------------------------------------------------------------
     // --- "Base de Datos" de Residuos (¡TUS FUNCIONES!) ---
-    // (Estas funciones NO necesitan cambiar)
     // ------------------------------------------------------------------
 
     public void EncontradoCocaCola()
@@ -130,7 +128,7 @@ public class ScanARManager : MonoBehaviour
             "Inorgánico", // clasificacion
             "Aluminio", // material
             "Contenedor de Inorgánicos (Reciclables)", // desechar
-            "Enjuagar y aplastar la lata." // adicional
+            "Enjuagar y aplastar la lata." // adicional (ahora se mostrará como Recomendación)
         );
     }
 
@@ -175,6 +173,18 @@ public class ScanARManager : MonoBehaviour
             "Plástico metalizado",
             "Contenedor de Inorgánicos (No reciclable)",
             "" // Sin adicional
+        );
+    }
+
+    // --- ¡NUEVA FUNCIÓN AÑADIDA! ---
+    public void EncontradoGalletas()
+    {
+        MostrarPopupExito(
+            "Emperador (Envoltura)",
+            "Inorgánico",
+            "Plástico metalizado",
+            "Contenedor de Inorgánicos (No reciclable)",
+            "Desechar sin ningun alimento dentro." // adicional
         );
     }
 }
