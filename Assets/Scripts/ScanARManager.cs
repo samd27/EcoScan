@@ -118,7 +118,7 @@ public class ScanARManager : MonoBehaviour
     }
 
     // ------------------------------------------------------------------
-    // --- "Base de Datos" de Residuos (¡TUS FUNCIONES!) ---
+    // --- "Base de Datos" de ResiduOS (¡TUS FUNCIONES!) ---
     // ------------------------------------------------------------------
 
     public void EncontradoCocaCola()
@@ -185,6 +185,152 @@ public class ScanARManager : MonoBehaviour
             "Plástico metalizado",
             "Contenedor de Inorgánicos (No reciclable)",
             "Desechar sin ningun alimento dentro." // adicional
+        );
+    }
+
+ public void EncontradoHersheysDark()
+    {
+        MostrarPopupExito(
+            "Hershey's Dark (envoltura)",
+            "Inorgánico",
+            "Plástico laminado metalizado (BOPP/PP con aluminio)",
+            "Inorgánicos NO reciclables",
+            "Compacta la envoltura y evita restos de chocolate."
+        );
+    }
+
+    public void EncontradoSidralMundet()
+    {
+        MostrarPopupExito(
+            "Sidral Mundet (botella)",
+            "Inorgánico",
+            "PET (#1) + tapa PP (#5) + etiqueta BOPP",
+            "Inorgánicos RECICLABLES",
+            "Separa tapa y etiqueta; enjuaga y compacta."
+        );
+    }
+
+    public void EncontradoGalletaArcoiris()
+    {
+        MostrarPopupExito(
+            "Arcoiris (envoltura)",
+            "Inorgánico",
+            "Plástico metalizado (BOPP)",
+            "Inorgánicos NO reciclables",
+            "Cierra la envoltura y deséchala limpia."
+        );
+    }
+
+    public void EncontradoBarritasFresa()
+    {
+        MostrarPopupExito(
+            "Barritas Fresa (envoltura)",
+            "Inorgánico",
+            "Plástico laminado/metalizado",
+            "Inorgánicos NO reciclables",
+            "Sacude migas antes de tirar para evitar lixiviados."
+        );
+    }
+
+    public void EncontradoBubuLubu()
+    {
+        MostrarPopupExito(
+            "Bubulubu (envoltura)",
+            "Inorgánico",
+            "Plástico metalizado (flow-pack)",
+            "Inorgánicos NO reciclables",
+            "Compacta la envoltura para reducir volumen."
+        );
+    }
+
+    public void EncontradoTridentXtraCare()
+    {
+        MostrarPopupExito(
+            "Trident XtraCare (empaque)",
+            "Inorgánico (mixto)",
+            "Caja de cartón + envolturas interiores plastificadas/metalizadas",
+            "Cartón → Inorgánicos RECICLABLES | Envolturas → Inorgánicos NO reciclables",
+            "Separa componentes: recicla la cajita; envolturas al no reciclable."
+        );
+    }
+
+    // -------------------------------------------------
+    // NUEVOS RESIDUOS agregados ahora (nombres sin ml ni g)
+    // -------------------------------------------------
+    public void EncontradoMelatonina()
+    {
+        MostrarPopupExito(
+            "Melatonina (caja y blíster)",
+            "Especial",
+            "Caja de cartón + blíster aluminio/PVC",
+            "Cartón → Inorgánicos RECICLABLES | Blíster/medicamento → ESPECIAL (llevar a contenedor de medicamentos en farmacia)",
+            "No tires tabletas al drenaje ni a la basura común; usa puntos de acopio para fármacos."
+        );
+    }
+
+    public void EncontradoMonsterEnergy()
+    {
+        MostrarPopupExito(
+            "Monster Energy (lata)",
+            "Inorgánico",
+            "Aluminio",
+            "Inorgánicos RECICLABLES",
+            "Vacía, enjuaga y compacta ligeramente la lata. La anilla puede ir junto con la lata."
+        );
+    }
+
+    public void EncontradoSabritasAdobadas()
+    {
+        MostrarPopupExito(
+            "Sabritas Adobadas (bolsa)",
+            "Inorgánico",
+            "Plástico laminado metalizado",
+            "Inorgánicos NO reciclables",
+            "Cierra y compacta la bolsa; evita residuos de aceite."
+        );
+    }
+
+    public void EncontradoPredatorEnergy()
+    {
+        MostrarPopupExito(
+            "Predator Energy (lata)",
+            "Inorgánico",
+            "Aluminio",
+            "Inorgánicos RECICLABLES",
+            "Vacía, enjuaga y compacta ligeramente."
+        );
+    }
+
+    public void EncontradoSantaClaraVainilla()
+    {
+        MostrarPopupExito(
+            "Santa Clara Vainilla (tetrapak)",
+            "Inorgánico",
+            "Cartón + polietileno + aluminio",
+            "Inorgánicos RECICLABLES (si hay acopio de tetrapak)",
+            "Enjuaga, escurre y aplana el envase antes de depositarlo."
+        );
+    }
+
+    public void EncontradoSantaClaraFresa()
+    {
+        MostrarPopupExito(
+            "Santa Clara Fresa (tetrapak)",
+            "Inorgánico",
+            "Cartón + polietileno + aluminio",
+            "Inorgánicos RECICLABLES (si hay acopio de tetrapak)",
+            "Enjuaga, escurre y aplana el envase antes de depositarlo."
+        );
+    }
+
+    public void EncontradoSantaClaraCapuccino()
+    {
+        MostrarPopupExito(
+            "Santa Clara Capuccino (tetrapak)",
+            "Inorgánico",
+            "Cartón + polietileno + aluminio",
+            "Inorgánicos RECICLABLES (si hay acopio de tetrapak)",
+            "Enjuaga, escurre y aplana el envase antes de depositarlo."
         );
     }
 }
