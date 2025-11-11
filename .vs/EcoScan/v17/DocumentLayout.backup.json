@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RecompensasManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\RecompensasManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RewardItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\RewardItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\GlobalPointsManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GlobalPointsManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RecompensasManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\RecompensasManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\BtnDesvanecimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\BtnDesvanecimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\AjustarPantalla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,19 +62,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BtnDesvanecimiento.cs",
-              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\BtnDesvanecimiento.cs",
-              "RelativeDocumentMoniker": "Assets\\BtnDesvanecimiento.cs",
-              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\BtnDesvanecimiento.cs",
-              "RelativeToolTip": "Assets\\BtnDesvanecimiento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "RecompensasManager.cs",
+              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RecompensasManager.cs",
+              "RelativeDocumentMoniker": "Assets\\RecompensasManager.cs",
+              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RecompensasManager.cs",
+              "RelativeToolTip": "Assets\\RecompensasManager.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwBsAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T17:57:59.449Z",
+              "WhenOpened": "2025-05-18T21:39:26.021Z",
               "EditorCaption": ""
             },
             {
@@ -87,58 +83,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "AjustarPantalla.cs",
               "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\AjustarPantalla.cs",
               "RelativeDocumentMoniker": "Assets\\AjustarPantalla.cs",
               "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\AjustarPantalla.cs",
               "RelativeToolTip": "Assets\\AjustarPantalla.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAkwC8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-18T01:26:54.73Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RecompensasManager.cs",
-              "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RecompensasManager.cs",
-              "RelativeDocumentMoniker": "Assets\\RecompensasManager.cs",
-              "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RecompensasManager.cs",
-              "RelativeToolTip": "Assets\\RecompensasManager.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAkwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T22:05:37.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ScanARPoints.cs",
               "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ScanARPoints.cs",
               "RelativeDocumentMoniker": "Assets\\ScanARPoints.cs",
               "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ScanARPoints.cs",
               "RelativeToolTip": "Assets\\ScanARPoints.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T22:00:50.693Z"
+              "WhenOpened": "2025-05-16T22:00:50.693Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GlobalPointsManager.cs",
               "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\GlobalPointsManager.cs",
               "RelativeDocumentMoniker": "Assets\\GlobalPointsManager.cs",
               "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\GlobalPointsManager.cs",
               "RelativeToolTip": "Assets\\GlobalPointsManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAkwCMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T21:59:25.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "BotonSumarPuntos.cs",
               "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\BotonSumarPuntos.cs",
               "RelativeDocumentMoniker": "Assets\\BotonSumarPuntos.cs",
@@ -150,20 +134,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RewardItem.cs",
               "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RewardItem.cs",
               "RelativeDocumentMoniker": "Assets\\RewardItem.cs",
               "ToolTip": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\RewardItem.cs",
               "RelativeToolTip": "Assets\\RewardItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T20:20:21.6Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "ModeloViewerManager.cs",
               "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ModeloViewerManager.cs",
               "RelativeDocumentMoniker": "Assets\\ModeloViewerManager.cs",
@@ -175,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "MainMenuManager.cs",
               "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\MainMenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\MainMenuManager.cs",
@@ -187,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "EventManager.cs",
               "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\EventManager.cs",
               "RelativeDocumentMoniker": "Assets\\EventManager.cs",
@@ -199,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "ModeloController.cs",
               "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ModeloController.cs",
               "RelativeDocumentMoniker": "Assets\\ModeloController.cs",
@@ -211,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "ScrollRect.cs",
               "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\ScrollRect.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\ScrollRect.cs",
@@ -223,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "CarruselManager.cs",
               "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\CarruselManager.cs",
               "RelativeDocumentMoniker": "Assets\\CarruselManager.cs",
@@ -235,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "ARButtonActions.cs",
               "DocumentMoniker": "C:\\Users\\sersh\\Downloads\\EcoScan (2)\\EcoScan\\Assets\\ARButtonActions.cs",
               "RelativeDocumentMoniker": "Assets\\ARButtonActions.cs",
