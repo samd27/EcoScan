@@ -1,22 +1,25 @@
 using UnityEngine;
-using UnityEngine.UI; // Para Image y Toggle
-using System.Collections.Generic; // Para List<>
-using System.Linq; // Para filtrar y ordenar (Where, Select, Distinct, etc.)
-using TMPro; // Para TextMeshProUGUI y TMP_InputField
+using UnityEngine.UI;
+using System.Collections; // ¡NUEVO! Para la Corutina de animación
+using System.Collections.Generic;
+using System.Linq;
+using TMPro;
+using PolyAndCode.UI; // Para ICell y RecyclableScrollRect
 
-public class ResiduoListManager : MonoBehaviour
+public class ResiduoListManager : MonoBehaviour, IRecyclableScrollRectDataSource
 {
     // --- CONEXIONES DEL MANAGER ---
-    [Header("Conexiones de Datos")]
-    public GameObject residuoItemPrefab;
-    public Transform contentParent;
     public string jsonFilePath = "DB/residuos";
+
+    // --- CONEXIÓN AL ASSET ---
+    [Header("Conexión al Asset")]
+    public RecyclableScrollRect recyclableScrollRect;
 
     // --- CONEXIONES DE UI PRINCIPAL ---
     [Header("UI Filtros Principales")]
     public TMP_InputField searchInputField;
     public GameObject searchIcon;
-    public GameObject filtrosPanel;
+    public CanvasGroup filtrosPanelCanvasGroup; // ¡MODIFICADO! De GameObject a CanvasGroup
 
     // --- CONEXIONES DE BOTONES DE CATEGORÍA ---
     [Header("Botones de Categoría")]
@@ -36,50 +39,77 @@ public class ResiduoListManager : MonoBehaviour
 
     // --- CONEXIONES DEL PANEL DE FILTROS ---
     [Header("Conexiones del Panel de Filtros")]
-    public GameObject togglePrefab; // El "Filtro_Toggle_Prefab"
-    public Transform filterContentParent; // El "Content" del ScrollView de filtros
+    public GameObject togglePrefab;
+    public Transform filterContentParent;
 
     // --- VARIABLES DE ESTADO PRIVADAS ---
     private List<Residuo> allResiduos = new List<Residuo>();
-    
-    // --- Variables para guardar el estado actual del filtro ---
+    private List<Residuo> _filteredResiduoList = new List<Residuo>();
     private string currentSearchText = "";
     private string currentCategory = "ALL";
     private bool sortAZ = false;
     private List<string> selectedMaterialFilters = new List<string>();
-    private List<Toggle> instantiatedToggles = new List<Toggle>(); // Para poder limpiarlos
+    private List<Toggle> instantiatedToggles = new List<Toggle>();
+    
+    // Para la animación del panel
+    private Coroutine activeFadeCoroutine;
 
+    
     // --- FUNCIONES DE UNITY ---
+    void Awake()
+    {
+        if (recyclableScrollRect != null)
+        {
+            recyclableScrollRect.DataSource = this;
+        }
+        else
+        {
+            Debug.LogError("¡No has asignado el RecyclableScrollRect en el Inspector!");
+        }
+
+        LoadResiduosFromJson();
+        PopulateFilterPanel();
+    }
 
     void Start()
     {
-        // 1. Ocultar el panel de filtros al inicio
-        if (filtrosPanel != null)
-            filtrosPanel.SetActive(false);
+        // --- ¡MODIFICADO! Ocultar panel con CanvasGroup ---
+        if (filtrosPanelCanvasGroup != null)
+        {
+            filtrosPanelCanvasGroup.alpha = 0f; // Invisible
+            filtrosPanelCanvasGroup.interactable = false; // No se puede cliquear
+            filtrosPanelCanvasGroup.blocksRaycasts = false; // No bloquea clics
+        }
 
-        // 2. Conectar el InputField (si se asignó)
         if (searchInputField != null)
         {
             searchInputField.onValueChanged.AddListener(SetSearchText);
         }
         
-        // 3. Establecer el estado inicial por defecto
         currentCategory = "ALL"; 
-        
-        // 4. Cargar datos del JSON a la lista maestra
-        LoadResiduosFromJson();
-        
-        // 5. Poblar el panel de filtros con los materiales únicos
-        PopulateFilterPanel();
-        
-        // 6. Actualizar el visual de los botones al estado "ALL" por defecto
         UpdateCategoryButtonsVisuals(); 
-
-        // 7. Mostrar todos los items por primera vez
+        
+        // Aplicar el filtro inicial
         ApplyFiltersAndSort();
     }
 
-    // --- FUNCIONES DE LÓGICA DE DATOS ---
+    // --- FUNCIONES OBLIGATORIAS DEL ASSET ---
+
+    public int GetItemCount()
+    {
+        return _filteredResiduoList.Count;
+    }
+
+    public void SetCell(ICell cell, int index)
+    {
+        var item = cell as ResiduoItemDisplay;
+        if (item != null && index < _filteredResiduoList.Count)
+        {
+            item.Setup(_filteredResiduoList[index]);
+        }
+    }
+    
+    // --- LÓGICA DE FILTROS Y DATOS (Sin cambios) ---
 
     void LoadResiduosFromJson()
     {
@@ -88,21 +118,52 @@ public class ResiduoListManager : MonoBehaviour
             Debug.LogError("Error: No se encontró el JSON en Resources/" + jsonFilePath);
             return;
         }
-
         string jsonText = "{\"residuos\":" + jsonFile.text + "}";
         ResiduoList residuoList = JsonUtility.FromJson<ResiduoList>(jsonText);
-
         if (residuoList == null || residuoList.residuos == null) {
              Debug.LogError("Error al deserializar el JSON.");
              return;
         }
-
         allResiduos = new List<Residuo>(residuoList.residuos);
     }
 
-    // --- FUNCIONES PÚBLICAS (Llamadas por los botones) ---
+    void ApplyFiltersAndSort()
+    {
+        IEnumerable<Residuo> filteredListQuery = allResiduos;
 
-    // Llamada por el InputField
+        // Aplicar filtros (Categoría, Búsqueda, Material)
+        if (currentCategory != "ALL")
+        {
+            filteredListQuery = filteredListQuery.Where(r => r.categoria == currentCategory);
+        }
+        if (!string.IsNullOrEmpty(currentSearchText))
+        {
+            filteredListQuery = filteredListQuery.Where(r => 
+                r.nombre.ToLower().Contains(currentSearchText) || 
+                r.keywords.ToLower().Contains(currentSearchText)
+            );
+        }
+        if (selectedMaterialFilters.Count > 0)
+        {
+            filteredListQuery = filteredListQuery.Where(r => 
+                selectedMaterialFilters.Contains(r.material)
+            );
+        }
+        if (sortAZ)
+        {
+            filteredListQuery = filteredListQuery.OrderBy(r => r.nombre);
+        }
+        
+        // Guardar resultado y avisar al asset
+        _filteredResiduoList = filteredListQuery.ToList();
+        if (recyclableScrollRect != null)
+        {
+            recyclableScrollRect.ReloadData();
+        }
+    }
+    
+    // --- FUNCIONES PÚBLICAS (Llamadas por botones) ---
+
     public void SetSearchText(string newText)
     {
         currentSearchText = newText.ToLower();
@@ -113,7 +174,6 @@ public class ResiduoListManager : MonoBehaviour
         ApplyFiltersAndSort();
     }
 
-    // Llamada por los botones Orgánico / Todos / Inorgánico
     public void SetCategoryFilter(string category)
     {
         currentCategory = category;
@@ -121,124 +181,86 @@ public class ResiduoListManager : MonoBehaviour
         ApplyFiltersAndSort();
     }
 
-    // Llamada por el botón A-Z
     public void ToggleSortAZ()
     {
         sortAZ = !sortAZ;
         ApplyFiltersAndSort();
     }
 
-    // Llamada por el botón "Filtros" y "Boton_Cerrar"
-    public void ShowFilterPanel(bool show)
-    {
-        if (filtrosPanel != null)
-            filtrosPanel.SetActive(show);
-    }
-
-    // Llamada por el botón "Aplicar" del panel de filtros
     public void ApplyAndCloseFilters()
     {
-        ApplyFiltersAndSort(); // Aplica todos los filtros
-        ShowFilterPanel(false); // Cierra el panel
+        ApplyFiltersAndSort();
+        ShowFilterPanel(false); // Llamará a la nueva función de animación
     }
 
-    // Llamada por el botón "Limpiar" del panel de filtros
     public void ClearMaterialFilters()
     {
-        // 1. Limpiar la lista de datos
         selectedMaterialFilters.Clear();
-
-        // 2. Desmarcar visualmente todas las casillas
         foreach (Toggle t in instantiatedToggles)
         {
-            // Ponemos .isOn = false, lo que también disparará
-            // el listener OnMaterialToggleChanged y limpiará la lista
             t.isOn = false;
         }
-
-        // 3. Aplicar los filtros (que ahora están limpios)
         ApplyFiltersAndSort();
     }
 
+    // --- LÓGICA DEL PANEL DE FILTROS (Poblado) ---
 
-    // --- FUNCIONES INTERNAS DE ACTUALIZACIÓN ---
-
-    void ApplyFiltersAndSort()
+    void PopulateFilterPanel()
     {
-        // 1. Empezar con la lista completa
-        IEnumerable<Residuo> filteredList = allResiduos;
-
-        // 2. Aplicar filtro de Categoría
-        if (currentCategory != "ALL")
+        var uniqueMaterials = allResiduos
+                                .Where(r => !string.IsNullOrEmpty(r.material))
+                                .Select(r => r.material)
+                                .Distinct()
+                                .OrderBy(m => m);
+        instantiatedToggles.Clear();
+        foreach (string material in uniqueMaterials)
         {
-            filteredList = filteredList.Where(r => r.categoria == currentCategory);
-        }
-
-        // 3. Aplicar filtro de Búsqueda (en nombre Y keywords)
-        if (!string.IsNullOrEmpty(currentSearchText))
-        {
-            filteredList = filteredList.Where(r => 
-                r.nombre.ToLower().Contains(currentSearchText) || 
-                r.keywords.ToLower().Contains(currentSearchText)
-            );
-        }
-
-        // 4. Aplicar filtro de Material (del panel de filtros)
-        if (selectedMaterialFilters.Count > 0)
-        {
-            filteredList = filteredList.Where(r => 
-                selectedMaterialFilters.Contains(r.material)
-            );
-        }
-
-        // 5. Aplicar Ordenamiento
-        if (sortAZ)
-        {
-            filteredList = filteredList.OrderBy(r => r.nombre);
-        }
-        
-        // 6. ¡Finalmente, mostrar el resultado!
-        UpdateDisplay(filteredList.ToList());
-    }
-
-    void UpdateDisplay(List<Residuo> listToDisplay)
-    {
-        // Borrar todos los items viejos
-        foreach (Transform child in contentParent)
-        {
-            Destroy(child.gameObject);
-        }
-
-        // Crear los nuevos items filtrados/ordenados
-        foreach (Residuo residuo in listToDisplay)
-        {
-            GameObject newItem = Instantiate(residuoItemPrefab, contentParent);
-            newItem.GetComponent<ResiduoItemDisplay>().Setup(residuo);
+            GameObject newToggleObj = Instantiate(togglePrefab, filterContentParent);
+            Toggle newToggle = newToggleObj.GetComponent<Toggle>();
+            TextMeshProUGUI label = newToggleObj.GetComponentInChildren<TextMeshProUGUI>();
+            if (label != null)
+            {
+                label.text = material;
+            }
+            string mat = material; 
+            newToggle.onValueChanged.AddListener((isOn) => {
+                OnMaterialToggleChanged(isOn, mat);
+            });
+            instantiatedToggles.Add(newToggle);
         }
     }
 
+    void OnMaterialToggleChanged(bool isOn, string material)
+    {
+        if (isOn)
+        {
+            if (!selectedMaterialFilters.Contains(material))
+                selectedMaterialFilters.Add(material);
+        }
+        else
+        {
+            if (selectedMaterialFilters.Contains(material))
+                selectedMaterialFilters.Remove(material);
+        }
+    }
+
+    // --- LÓGICA VISUAL DE BOTONES (Sin cambios) ---
+    
     void UpdateCategoryButtonsVisuals()
     {
-        // 1. Poner TODOS en estado "Inactivo"
         if (botonOrganicoImage != null) {
             botonOrganicoImage.sprite = spriteBotonNormal;
             botonOrganicoImage.color = colorInactivo;
         }
-        // No se cambia el color del texto
-
         if (botonTodosImage != null) {
             botonTodosImage.sprite = spriteBotonNormal;
             botonTodosImage.color = colorInactivo;
         }
-        // No se cambia el color del texto
-
         if (botonInorganicoImage != null) {
             botonInorganicoImage.sprite = spriteBotonNormal;
             botonInorganicoImage.color = colorInactivo;
         }
-        // No se cambia el color del texto
 
-        // 2. Poner el estado "Activo" SÓLO al botón correcto
         switch (currentCategory)
         {
             case "ORGANICO":
@@ -263,54 +285,55 @@ public class ResiduoListManager : MonoBehaviour
         }
     }
 
-    // --- FUNCIONES DEL PANEL DE FILTROS ---
+    // --- ¡NUEVAS FUNCIONES DE ANIMACIÓN! ---
 
-    void PopulateFilterPanel()
+    // Función pública que llaman los botones "Filtros" y "Cerrar"
+    public void ShowFilterPanel(bool show)
     {
-        // Usar LINQ para encontrar todos los materiales ÚNICOS
-        var uniqueMaterials = allResiduos
-                                .Where(r => !string.IsNullOrEmpty(r.material))
-                                .Select(r => r.material)
-                                .Distinct()
-                                .OrderBy(m => m);
-
-        instantiatedToggles.Clear();
-
-        foreach (string material in uniqueMaterials)
+        // Detener cualquier animación anterior
+        if (activeFadeCoroutine != null)
         {
-            GameObject newToggleObj = Instantiate(togglePrefab, filterContentParent);
-            Toggle newToggle = newToggleObj.GetComponent<Toggle>();
-            TextMeshProUGUI label = newToggleObj.GetComponentInChildren<TextMeshProUGUI>();
-
-            if (label != null)
-            {
-                label.text = material; // Ej: "Plástico", "Metal", "Vidrio"
-            }
-
-            // Añadir un "listener" que nos avise cuando el usuario marque/desmarque
-            string mat = material; 
-            newToggle.onValueChanged.AddListener((isOn) => {
-                OnMaterialToggleChanged(isOn, mat);
-            });
-
-            instantiatedToggles.Add(newToggle);
+            StopCoroutine(activeFadeCoroutine);
         }
+        
+        // Empezar la nueva animación
+        float duration = 0.2f; // Duración en segundos
+        activeFadeCoroutine = StartCoroutine(FadePanel(show, duration));
     }
 
-    // Esta es la función que se llama cuando un Toggle cambia
-    void OnMaterialToggleChanged(bool isOn, string material)
+    // La Corutina que hace la animación
+    private IEnumerator FadePanel(bool show, float duration)
     {
-        if (isOn)
+        float startTime = Time.time;
+        float startAlpha = filtrosPanelCanvasGroup.alpha;
+        float targetAlpha = show ? 1.0f : 0.0f;
+
+        // Activar interacción al MOSTRAR
+        if (show)
         {
-            // Si se marcó, añadir a la lista
-            if (!selectedMaterialFilters.Contains(material))
-                selectedMaterialFilters.Add(material);
+            filtrosPanelCanvasGroup.interactable = true;
+            filtrosPanelCanvasGroup.blocksRaycasts = true;
         }
-        else
+
+        // Bucle de animación
+        while (Time.time < startTime + duration)
         {
-            // Si se desmarcó, quitar de la lista
-            if (selectedMaterialFilters.Contains(material))
-                selectedMaterialFilters.Remove(material);
+            float t = (Time.time - startTime) / duration;
+            float newAlpha = Mathf.SmoothStep(startAlpha, targetAlpha, t);
+            filtrosPanelCanvasGroup.alpha = newAlpha;
+            yield return null; // Espera al siguiente frame
         }
+
+        // Asegurarse de que el valor final sea exacto
+        filtrosPanelCanvasGroup.alpha = targetAlpha;
+
+        // Desactivar interacción al OCULTAR
+        if (!show)
+        {
+            filtrosPanelCanvasGroup.interactable = false;
+            filtrosPanelCanvasGroup.blocksRaycasts = false;
+        }
+
+        activeFadeCoroutine = null; // Limpiar la corutina
     }
 }

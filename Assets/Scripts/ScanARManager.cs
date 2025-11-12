@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections;
-using TMPro; // ¡Importante para los textos!
+using System.Collections; // ¡NECESARIO para la Corutina de animación!
+using TMPro; 
 
 public class ScanARManager : MonoBehaviour
 {
@@ -13,8 +13,10 @@ public class ScanARManager : MonoBehaviour
     [Header("UI - Barra Superior")]
     public Button backButton; 
 
+    // --- ¡MODIFICADO! ---
     [Header("UI - Pop-up General")]
-    public GameObject popupFondo; 
+    public CanvasGroup popupFondoCanvasGroup; // Cambiamos GameObject por CanvasGroup
+    private Coroutine activeFadeCoroutine; // Para controlar la animación
 
     [Header("UI - Textos del Pop-up")]
     public TextMeshProUGUI textoTitulo;
@@ -27,19 +29,21 @@ public class ScanARManager : MonoBehaviour
     [Header("UI - Botones del Pop-up")]
     public Button botonAceptar;
     public Button botonCerrar;
-    public Button botonIrListado;
 
     
     void Start()
     {
-        // 1. Ocultar pop-up al inicio
-        popupFondo.SetActive(false);
+        // 1. Ocultar pop-up al inicio (¡NUEVA FORMA!)
+        popupFondoCanvasGroup.alpha = 0f;
+        popupFondoCanvasGroup.interactable = false;
+        popupFondoCanvasGroup.blocksRaycasts = false;
 
         // 2. Asignar funciones a los botones
         backButton.onClick.AddListener(IrAMainMenu);
         botonAceptar.onClick.AddListener(CerrarPopup);
         botonCerrar.onClick.AddListener(CerrarPopup);
-        botonIrListado.onClick.AddListener(IrAListado);
+
+        // --- ¡NUEVO! Escuchar clics en el link del texto ---
 
         // 3. Iniciar el temporizador
         StartCoroutine(TemporizadorDeFallo());
@@ -47,29 +51,25 @@ public class ScanARManager : MonoBehaviour
 
     // --- LÓGICA DEL TEMPORIZADOR Y POP-UPS ---
 
-    // ¡FUNCIÓN ACTUALIZADA! "Adicional" ahora es "Recomendación".
     void MostrarPopupExito(string nombreResiduo, string clasificacion, string material, string desechar, string adicional = "")
     {
         if (targetEncontrado) return;
         targetEncontrado = true;
         StopAllCoroutines();
 
-        popupFondo.SetActive(true);
+        // ¡MODIFICADO! Llama a la animación
+        ShowPopup(true); 
         contenedorExito.SetActive(true);
         contenedorFallo.SetActive(false);
 
-        // 1. Título
         textoTitulo.text = $"Residuo: {nombreResiduo}"; 
 
-        // 2. Descripción
         string descripcionCompleta = $"Tipo: {clasificacion}\n" +
                                      $"Material: {material}\n" +
                                      $"Desechar: {desechar}";
         
-        // 3. Añade la recomendación SÓLO si no está vacía
         if (!string.IsNullOrEmpty(adicional))
         {
-            // --- ¡ESTA ES LA LÍNEA MODIFICADA! ---
             descripcionCompleta += $"\nRecomendación: {adicional}"; 
         }
         
@@ -84,12 +84,15 @@ public class ScanARManager : MonoBehaviour
         {
             targetEncontrado = true; 
             
-            popupFondo.SetActive(true);
+            // ¡MODIFICADO! Llama a la animación
+            ShowPopup(true);
             contenedorExito.SetActive(false);
             contenedorFallo.SetActive(true);
 
             textoTitulo.text = "Residuo no identificado";
-            textoDescripcion.text = "Se sugiere buscar un residuo similar en el Listado de residuos.";
+
+            // --- ¡TEXTO MODIFICADO CON LINK Y ESTILO! ---
+            textoDescripcion.text = "Se sugiere buscar un residuo similar en el <link=\"listado\"><u><i><b>Listado de residuos</b></i></u></link>.";
         }
     }
 
@@ -97,24 +100,71 @@ public class ScanARManager : MonoBehaviour
 
     void CerrarPopup()
     {
-        // Oculta el pop-up
-        popupFondo.SetActive(false);
-        // Reinicia el estado para poder escanear otra vez
+        // ¡MODIFICADO! Llama a la animación
+        ShowPopup(false);
+        
+        // Reinicia el estado después de que la animación termine (o casi)
+        // Para ser más precisos, esto debería ir en la corutina
+        // pero por simplicidad, lo dejamos aquí.
         targetEncontrado = false;
-        // Reinicia el temporizador
         StartCoroutine(TemporizadorDeFallo());
     }
 
     void IrAMainMenu()
     {
-        // ¡Recuerda poner el nombre exacto de tu escena!
         SceneManager.LoadScene("MainMenu");
     }
 
-    void IrAListado()
+    public void IrAListado()
     {
-        // ¡Recuerda poner el nombre exacto de tu escena!
         SceneManager.LoadScene("ListadoScene");
+    }
+
+    // --- ¡NUEVAS FUNCIONES! (Para el Link y la Animación) ---
+
+    // Esta función se llama cuando se hace clic en el <link="listado">
+
+    // Función pública que llaman los botones "Filtros" y "Cerrar"
+    public void ShowPopup(bool show)
+    {
+        if (activeFadeCoroutine != null)
+        {
+            StopCoroutine(activeFadeCoroutine);
+        }
+        float duration = 0.2f; // Duración en segundos
+        activeFadeCoroutine = StartCoroutine(FadePopup(show, duration));
+    }
+
+    // La Corutina que hace la animación
+    private IEnumerator FadePopup(bool show, float duration)
+    {
+        float startTime = Time.time;
+        float startAlpha = popupFondoCanvasGroup.alpha;
+        float targetAlpha = show ? 1.0f : 0.0f;
+
+        if (show)
+        {
+            popupFondoCanvasGroup.interactable = true;
+            popupFondoCanvasGroup.blocksRaycasts = true;
+        }
+
+        while (Time.time < startTime + duration)
+        {
+            float t = (Time.time - startTime) / duration;
+            float newAlpha = Mathf.SmoothStep(startAlpha, targetAlpha, t);
+            popupFondoCanvasGroup.alpha = newAlpha;
+            yield return null;
+        }
+
+        popupFondoCanvasGroup.alpha = targetAlpha;
+
+        if (!show)
+        {
+            popupFondoCanvasGroup.interactable = false;
+            popupFondoCanvasGroup.blocksRaycasts = false;
+        }
+
+        activeFadeCoroutine = null;
     }
 
     // ------------------------------------------------------------------
