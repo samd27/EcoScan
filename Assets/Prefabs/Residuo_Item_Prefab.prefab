@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 3765486618654465155}
   - component: {fileID: 7975355500102617877}
   - component: {fileID: 1363683430302515329}
+  - component: {fileID: 3140018088845975751}
   m_Layer: 5
   m_Name: Residuo_Item_Prefab
   m_TagString: Untagged
@@ -346,6 +347,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3140018088845975751}
+        m_TargetAssemblyTypeName: HapticManager, Assembly-CSharp
+        m_MethodName: VibrateTick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7975355500102617877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +400,18 @@ MonoBehaviour:
   itemImage: {fileID: 6257171373611786784}
   nombreText: {fileID: 996453805304504102}
   tipoText: {fileID: 1725252260616969406}
+--- !u!114 &3140018088845975751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5889500947663087651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81253830afc984e49baf86448e728b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8718384524112680270
 GameObject:
   m_ObjectHideFlags: 0

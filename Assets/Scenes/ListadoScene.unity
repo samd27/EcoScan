@@ -245,6 +245,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 750394300}
+        m_TargetAssemblyTypeName: HapticManager, Assembly-CSharp
+        m_MethodName: VibrateTick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &503925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,6 +778,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 750394300}
+        m_TargetAssemblyTypeName: HapticManager, Assembly-CSharp
+        m_MethodName: VibrateTick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &119518925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,6 +1077,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: INORGANICO
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 750394300}
+        m_TargetAssemblyTypeName: HapticManager, Assembly-CSharp
+        m_MethodName: VibrateTick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &237429655
@@ -1643,6 +1679,18 @@ MonoBehaviour:
           m_StringArgument: ORGANICO
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 750394300}
+        m_TargetAssemblyTypeName: HapticManager, Assembly-CSharp
+        m_MethodName: VibrateTick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &517448106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1851,8 +1899,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3700021267314777907, guid: 7e2f6235716065b40bf60f230bb13454, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 750394300}
   m_SourcePrefab: {fileID: 100100000, guid: 7e2f6235716065b40bf60f230bb13454, type: 3}
+--- !u!1 &750394299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3700021267314777907, guid: 7e2f6235716065b40bf60f230bb13454, type: 3}
+  m_PrefabInstance: {fileID: 750394298}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &750394300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750394299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81253830afc984e49baf86448e728b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &853772684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,6 +2527,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 750394300}
+        m_TargetAssemblyTypeName: HapticManager, Assembly-CSharp
+        m_MethodName: VibrateTick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &940083763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2647,6 +2727,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: ResiduoListManager, Assembly-CSharp
         m_MethodName: ShowFilterPanel
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 750394300}
+        m_TargetAssemblyTypeName: HapticManager, Assembly-CSharp
+        m_MethodName: VibrateTick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3543,6 +3635,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 750394300}
+        m_TargetAssemblyTypeName: HapticManager, Assembly-CSharp
+        m_MethodName: VibrateTick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1318812117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4339,18 +4443,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7856513926450455262, guid: 7e2f6235716065b40bf60f230bb13454, type: 3}
     - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 750394300}
+    - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
@@ -4358,8 +4474,16 @@ PrefabInstance:
       value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: VibrateTick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HapticManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -4367,6 +4491,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361791936190163276, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3080025488625856501, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
@@ -4392,6 +4520,34 @@ PrefabInstance:
     - target: {fileID: 3402736556613569348, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 779
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502971272215061936, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502971272215061936, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502971272215061936, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 750394300}
+    - target: {fileID: 3502971272215061936, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502971272215061936, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: VibrateTick
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502971272215061936, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: HapticManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502971272215061936, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3825450508754564229, guid: 480df4a307a358b4cbcf7238bd474ca2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4688,6 +4844,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: ALL
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 750394300}
+        m_TargetAssemblyTypeName: HapticManager, Assembly-CSharp
+        m_MethodName: VibrateTick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1943608295
