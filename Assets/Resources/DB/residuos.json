@@ -6,7 +6,7 @@
     "nombre": "Cáscaras de fruta y verdura",
     "material": "Orgánico",
     "submaterial": "",
-    "descripcion": "sin plásticos/metal, escurrido",
+    "descripcion": "Desechar en contenedor de orgánicos. Retira cualquier etiqueta adhesiva y escurre el exceso de líquido antes de tirarlas.",
     "keywords": "cascara, fruta, verdura, comida, organico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -17,7 +17,7 @@
     "nombre": "Filtros de café y bolsitas de té",
     "material": "Papel / Orgánico",
     "submaterial": "",
-    "descripcion": "sin plásticos/metal, escurrido",
+    "descripcion": "Desechar en contenedor de orgánicos. Asegúrate de quitar grapas o etiquetas sintéticas y escúrrelos bien.",
     "keywords": "cafe, filtro, te, comida, organico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -28,7 +28,7 @@
     "nombre": "Hojas, pasto podado y flores",
     "material": "Orgánico",
     "submaterial": "",
-    "descripcion": "sin tierra/piedras en exceso",
+    "descripcion": "Desechar en contenedor de orgánicos. Deposítalos sin bolsas de plástico y sacude el exceso de tierra o piedras.",
     "keywords": "hojas, pasto, jardin, organico, flores",
     "ruta_imagen": "residuo_img.png"
   },
@@ -39,7 +39,7 @@
     "nombre": "Aceite de cocina usado",
     "material": "Aceite",
     "submaterial": "",
-    "descripcion": "en botella cerrada",
+    "descripcion": "Desechar en contenedor de orgánicos o contenedor para aceites. Déjalo enfriar, fíltralo y guárdalo en una botella cerrada herméticamente.",
     "keywords": "aceite, cocina, grasa, organico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -50,7 +50,7 @@
     "nombre": "Hojas impresas y apuntes",
     "material": "Papel",
     "submaterial": "Blanco/mixto",
-    "descripcion": "limpio y seco, sin grapas",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para papel. El material debe estar seco, limpio y sin grapas o clips.",
     "keywords": "hojas, papel, oficina, apuntes, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -61,7 +61,7 @@
     "nombre": "Cajas de paquetería",
     "material": "Cartón",
     "submaterial": "Corrugado",
-    "descripcion": "plegado; retirar cinta excesiva",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para cartón. Desarma la caja, pliégala para ahorrar espacio y retira la cinta adhesiva.",
     "keywords": "caja, carton, empaque, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -72,7 +72,7 @@
     "nombre": "Cuadernos y revistas",
     "material": "Papel",
     "submaterial": "",
-    "descripcion": "sin plásticos/espirales",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para papel. Retira los espirales metálicos y las portadas plásticas antes de depositar.",
     "keywords": "cuaderno, revista, folleto, inorganico, papel",
     "ruta_imagen": "residuo_img.png"
   },
@@ -83,7 +83,7 @@
     "nombre": "Botellas de agua/refresco",
     "material": "Plástico",
     "submaterial": "PET",
-    "descripcion": "enjuagado; compactar; tapa aparte",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos PET. Vacía el líquido, aplasta la botella y deposita la tapa por separado.",
     "keywords": "botella, plastico, pet, refresco, agua, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -94,7 +94,7 @@
     "nombre": "Botellas de detergente/shampoo",
     "material": "Plástico",
     "submaterial": "HDPE",
-    "descripcion": "limpio y seco",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos HDPE. Enjuaga bien el envase para eliminar residuos químicos y déjalo secar.",
     "keywords": "botella, plastico, hdpe, shampoo, detergente, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -105,7 +105,7 @@
     "nombre": "Bolsas limpias y plástico burbuja",
     "material": "Plástico",
     "submaterial": "LDPE",
-    "descripcion": "limpio; reunir dentro de una bolsa",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Reúne todas las bolsas limpias dentro de una sola para facilitar su recolección.",
     "keywords": "bolsa, plastico, ldpe, burbuja, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -116,7 +116,7 @@
     "nombre": "Tapas y toppers",
     "material": "Plástico",
     "submaterial": "PP",
-    "descripcion": "limpio y seco",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Verifica que estén totalmente limpios y libres de restos de comida.",
     "keywords": "tapa, plastico, pp, topper, vaso, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -127,7 +127,7 @@
     "nombre": "Cubiertos rígidos y charolas",
     "material": "Plástico",
     "submaterial": "PS rígido",
-    "descripcion": "limpio",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Límpialos para que no tengan residuos orgánicos adheridos.",
     "keywords": "cubierto, plastico, ps, charola, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -138,7 +138,7 @@
     "nombre": "Vasos/charolas de unicel",
     "material": "Plástico",
     "submaterial": "EPS (Unicel)",
-    "descripcion": "solo limpio, sin restos de comida",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para unicel. Solo se aceptan si están limpios; sacude cualquier residuo sólido.",
     "keywords": "unicel, eps, vaso, charola, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -149,7 +149,7 @@
     "nombre": "Latas de bebidas",
     "material": "Metal",
     "submaterial": "Aluminio",
-    "descripcion": "enjuagado; compactar",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para metales. Vacía el contenido, enjuaga ligeramente y aplasta la lata.",
     "keywords": "lata, aluminio, metal, refresco, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -160,7 +160,7 @@
     "nombre": "Latas de atún/verduras",
     "material": "Metal",
     "submaterial": "Acero / Hojalata",
-    "descripcion": "enjuagado; sin restos",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para metales. Lava bien el interior para evitar malos olores y plagas.",
     "keywords": "lata, acero, metal, hojalata, atun, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -171,7 +171,7 @@
     "nombre": "Botellas y frascos",
     "material": "Vidrio",
     "submaterial": "",
-    "descripcion": "sin tapa; enjuagado",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para vidrio. Retira tapas y corchos, enjuaga el interior y deposítalos con cuidado.",
     "keywords": "botella, frasco, vidrio, salsa, mermelada, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -182,7 +182,7 @@
     "nombre": "Cajas de leche/jugo (Tetra Pak)",
     "material": "Tetra Pak",
     "submaterial": "Multicapa",
-    "descripcion": "enjuagar y compactar",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para envases multicapa. Enjuaga, escurre y aplasta el envase para optimizar espacio.",
     "keywords": "tetra pak, multicapa, leche, jugo, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -193,7 +193,7 @@
     "nombre": "Playeras y batas limpias",
     "material": "Textil",
     "submaterial": "Reutilizable",
-    "descripcion": "limpios y doblados",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para textiles. La ropa debe estar limpia, seca y doblada para facilitar su rehúso.",
     "keywords": "ropa, textil, playera, bata, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -204,7 +204,7 @@
     "nombre": "Cables y cargadores",
     "material": "Electrónico",
     "submaterial": "RAEE pequeño",
-    "descripcion": "no desarmar",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para electrónicos. No los cortes ni desarmes; enróllalos ordenadamente.",
     "keywords": "cable, cargador, mouse, teclado, raee, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -215,7 +215,7 @@
     "nombre": "Pilas AA/AAA",
     "material": "Batería",
     "submaterial": "",
-    "descripcion": "no abrir; opcional: cubrir polos",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para pilas. Cubre los polos con cinta adhesiva y no las mezcles con basura general.",
     "keywords": "pila, bateria, aa, aaa, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -226,7 +226,7 @@
     "nombre": "Cartuchos de impresora",
     "material": "Tóner",
     "submaterial": "",
-    "descripcion": "embolsados, sin derrames",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para electrónicos. Colócalos en una bolsa sellada para evitar derrames de tinta o polvo.",
     "keywords": "cartucho, toner, impresora, raee, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -237,7 +237,7 @@
     "nombre": "CDs/DVDs y estuches",
     "material": "Plástico / Policarbonato",
     "submaterial": "",
-    "descripcion": "reunir por lote",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para electrónicos. Separa el disco del estuche y agrúpalos por lotes.",
     "keywords": "cd, dvd, disco, estuche, raee, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -248,7 +248,7 @@
     "nombre": "Lonas y banners",
     "material": "Plástico (Lona)",
     "submaterial": "",
-    "descripcion": "limpios, enrollados",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Deben estar libres de polvo y enrollados para su fácil manejo.",
     "keywords": "lona, banner, publicidad, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -259,7 +259,7 @@
     "nombre": "Envolturas de snacks (Sabritas, galletas)",
     "material": "Plástico",
     "submaterial": "Laminado / Metalizado",
-    "descripcion": "limpios; sin grasa",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos flexibles. Sacude las migajas y asegúrate de que no tengan restos de grasa.",
     "keywords": "envoltura, snack, galleta, sabrita, laminado, inorganico, magnum",
     "ruta_imagen": "residuo_img.png"
   },
@@ -270,7 +270,7 @@
     "nombre": "Cubrebocas",
     "material": "Textil / Plástico",
     "submaterial": "",
-    "descripcion": "embolsar",
+    "descripcion": "Desechar en contenedor de inorgánicos. Corta los elásticos para proteger a la fauna y colócalos dentro de una bolsa cerrada.",
     "keywords": "cubrebocas, no reciclable, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -281,7 +281,7 @@
     "nombre": "Vidrio plano y espejos",
     "material": "Vidrio",
     "submaterial": "",
-    "descripcion": "no mezclar con vidrio de botellas",
+    "descripcion": "Desechar en contenedor de inorgánicos. No mezclar con botellas reciclables; envuélvelos en papel grueso si están rotos.",
     "keywords": "vidrio, espejo, ventana, no reciclable, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -292,7 +292,7 @@
     "nombre": "Vajilla de cerámica",
     "material": "Cerámica",
     "submaterial": "",
-    "descripcion": "embolsar",
+    "descripcion": "Desechar en contenedor de inorgánicos. Si las piezas están rotas, envuélvelas en papel o cartón para prevenir accidentes.",
     "keywords": "ceramica, plato, taza, roto, no reciclable, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -303,7 +303,7 @@
     "nombre": "Tortillas y pan",
     "material": "Orgánico",
     "submaterial": "",
-    "descripcion": "sin plásticos, escurrido",
+    "descripcion": "Desechar en contenedor de orgánicos. Retira cualquier bolsa de plástico o papel y deposítalos sin exceso de humedad.",
     "keywords": "tortilla, pan, comida, cafeteria, organico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -314,7 +314,7 @@
     "nombre": "Cascarones de huevo",
     "material": "Orgánico",
     "submaterial": "",
-    "descripcion": "sin plásticos/metal, escurrido",
+    "descripcion": "Desechar en contenedor de orgánicos. Tritúralos ligeramente para reducir volumen y asegúrate de que no lleven plástico.",
     "keywords": "huevo, cascara, comida, organico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -325,7 +325,7 @@
     "nombre": "Sobras de arroz y pasta",
     "material": "Orgánico",
     "submaterial": "",
-    "descripcion": "sin plásticos, escurrido",
+    "descripcion": "Desechar en contenedor de orgánicos. Escurre bien los líquidos y salsas antes de tirarlos al contenedor.",
     "keywords": "arroz, pasta, comida, cafeteria, organico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -336,7 +336,7 @@
     "nombre": "Sobras de frutas picadas",
     "material": "Orgánico",
     "submaterial": "",
-    "descripcion": "sin plásticos, escurrido",
+    "descripcion": "Desechar en contenedor de orgánicos. Separa los palillos o tenedores de plástico y escurre el jugo excedente.",
     "keywords": "fruta, picada, comida, cafeteria, organico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -347,7 +347,7 @@
     "nombre": "Restos de ensaladas",
     "material": "Orgánico",
     "submaterial": "",
-    "descripcion": "sin aderezos plásticos, escurrido",
+    "descripcion": "Desechar en contenedor de orgánicos. Intenta escurrir el aderezo en lo posible y no incluyas recipientes plásticos.",
     "keywords": "ensalada, verdura, comida, organico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -358,7 +358,7 @@
     "nombre": "Granos de café molido",
     "material": "Orgánico",
     "submaterial": "",
-    "descripcion": "sin plásticos, escurrido",
+    "descripcion": "Desechar en contenedor de orgánicos. Puedes depositarlos directamente o con filtros de papel, evitando cápsulas de plástico.",
     "keywords": "cafe, grano, molido, organico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -369,7 +369,7 @@
     "nombre": "Servilletas de papel usadas",
     "material": "Papel",
     "submaterial": "",
-    "descripcion": "sin plásticos ni grasa excesiva",
+    "descripcion": "Desechar en contenedor de orgánicos. Solo deposítalas si tienen restos de comida y no están empapadas en productos químicos de limpieza.",
     "keywords": "servilleta, papel, comida, organico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -380,7 +380,7 @@
     "nombre": "Folders y carpetas",
     "material": "Papel / Cartón",
     "submaterial": "",
-    "descripcion": "sin clips ni broches metálicos",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para papel. Es indispensable retirar broches metálicos o partes plásticas antes de reciclar.",
     "keywords": "folder, carpeta, archivo, oficina, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -391,7 +391,7 @@
     "nombre": "Libros viejos y enciclopedias",
     "material": "Papel",
     "submaterial": "",
-    "descripcion": "sin plásticos protectores",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para papel. Retira las cubiertas plastificadas si es posible y deposita solo las hojas.",
     "keywords": "libro, enciclopedia, biblioteca, papel, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -402,7 +402,7 @@
     "nombre": "Periódico universitario",
     "material": "Papel",
     "submaterial": "Periódico",
-    "descripcion": "limpio y seco",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para papel. El periódico debe estar seco y sin manchas de grasa o aceite.",
     "keywords": "periodico, gaceta, papel, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -413,7 +413,7 @@
     "nombre": "Cajas de pizza",
     "material": "Cartón",
     "submaterial": "",
-    "descripcion": "sin restos de comida ni grasa",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para cartón. Solo recicla la tapa si está limpia; la base con grasa va a orgánicos o basura general.",
     "keywords": "caja, pizza, carton, cafeteria, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -424,7 +424,7 @@
     "nombre": "Cartulinas de presentaciones",
     "material": "Cartón",
     "submaterial": "Cartulina",
-    "descripcion": "sin decoraciones plásticas",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para papel. Retira cualquier decoración plástica, brillantina o cinta adhesiva.",
     "keywords": "cartulina, presentacion, proyecto, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -435,7 +435,7 @@
     "nombre": "Sobres de correspondencia",
     "material": "Papel",
     "submaterial": "",
-    "descripcion": "sin ventanas plásticas",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para papel. Arranca las ventanillas de plástico antes de colocarlos en el contenedor.",
     "keywords": "sobre, carta, correspondencia, papel, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -446,7 +446,7 @@
     "nombre": "Rollos de papel higiénico",
     "material": "Cartón",
     "submaterial": "",
-    "descripcion": "solo el tubo de cartón",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para cartón. Deposita únicamente el tubo de cartón limpio y aplástalo.",
     "keywords": "rollo, carton, papel, baño, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -457,7 +457,7 @@
     "nombre": "Rollos de papel de cocina",
     "material": "Cartón",
     "submaterial": "",
-    "descripcion": "solo el tubo de cartón",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para cartón. Asegúrate de que el tubo esté limpio y seco antes de desecharlo.",
     "keywords": "rollo, carton, papel, cocina, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -468,7 +468,7 @@
     "nombre": "Volantes y trípticos",
     "material": "Papel",
     "submaterial": "",
-    "descripcion": "sin plastificado excesivo",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para papel. Verifica que no estén excesivamente plastificados.",
     "keywords": "volante, triptico, folleto, papel, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -479,7 +479,7 @@
     "nombre": "Pósters y carteles",
     "material": "Papel",
     "submaterial": "",
-    "descripcion": "sin plastificar",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para papel. No se aceptan si están laminados o tienen mucha cinta adhesiva.",
     "keywords": "poster, cartel, papel, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -490,7 +490,7 @@
     "nombre": "Cajas de cereal",
     "material": "Cartón",
     "submaterial": "",
-    "descripcion": "plegado, sin bolsa interior",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para cartón. Separa la bolsa plástica interior y aplasta la caja por completo.",
     "keywords": "caja, cereal, carton, cafeteria, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -501,7 +501,7 @@
     "nombre": "Cajas de galletas y chocolates",
     "material": "Cartón",
     "submaterial": "",
-    "descripcion": "sin papel celofán interior",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para cartón. Retira envoltorios de celofán o charolas plásticas del interior.",
     "keywords": "caja, galleta, chocolate, carton, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -512,7 +512,7 @@
     "nombre": "Papel kraft y de estraza",
     "material": "Papel",
     "submaterial": "Kraft",
-    "descripcion": "limpio y seco",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para papel. Debe estar libre de grasas, aceites o cintas plásticas.",
     "keywords": "papel, kraft, estraza, empaque, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -523,7 +523,7 @@
     "nombre": "Notas adhesivas (Post-it)",
     "material": "Papel",
     "submaterial": "",
-    "descripcion": "sin adherir a superficies",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para papel. Evita pegarlas entre sí o en otras superficies al desecharlas.",
     "keywords": "nota, adhesiva, postit, papel, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -534,7 +534,7 @@
     "nombre": "Vasos desechables transparentes",
     "material": "Plástico",
     "submaterial": "PET",
-    "descripcion": "enjuagado, sin tapa",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos PET. Vacía el contenido, enjuaga y no incluyas el popote.",
     "keywords": "vaso, plastico, pet, cafeteria, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -545,7 +545,7 @@
     "nombre": "Botellas de jugo individual",
     "material": "Plástico",
     "submaterial": "PET",
-    "descripcion": "enjuagado, compactar",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos PET. Escurre el jugo restante, aplasta la botella y tápala.",
     "keywords": "botella, jugo, pet, plastico, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -556,7 +556,7 @@
     "nombre": "Botellas de agua con electrolitos",
     "material": "Plástico",
     "submaterial": "PET",
-    "descripcion": "enjuagado, compactar",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos PET. Enjuaga el envase para evitar que quede pegajoso y compáctalo.",
     "keywords": "botella, agua, electrolitos, pet, deportivo, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -567,7 +567,7 @@
     "nombre": "Protectores de pantalla",
     "material": "Plástico",
     "submaterial": "PET",
-    "descripcion": "usados o rotos",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Si tienen vidrio templado adherido, deséchalos como basura general.",
     "keywords": "protector, pantalla, mica, celular, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -578,7 +578,7 @@
     "nombre": "Envases de gel antibacterial",
     "material": "Plástico",
     "submaterial": "HDPE",
-    "descripcion": "vacíos y enjuagados",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Deben estar completamente vacíos y enjuagados antes de tirar.",
     "keywords": "envase, gel, antibacterial, plastico, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -589,7 +589,7 @@
     "nombre": "Bolsas de pan y tortillas",
     "material": "Plástico",
     "submaterial": "LDPE",
-    "descripcion": "limpias, sin migajas",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Sacude las migajas y agrúpalas con otras bolsas flexibles.",
     "keywords": "bolsa, pan, tortilla, plastico, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -600,7 +600,7 @@
     "nombre": "Envases de yogurt",
     "material": "Plástico",
     "submaterial": "PP",
-    "descripcion": "enjuagado y limpio",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Es fundamental lavar el envase para remover restos lácteos y evitar olores.",
     "keywords": "yogurt, envase, plastico, cafeteria, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -611,7 +611,7 @@
     "nombre": "Contenedores de comida para llevar",
     "material": "Plástico",
     "submaterial": "PP",
-    "descripcion": "limpio, sin restos de comida",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Lava bien el contenedor para eliminar grasa o salsas.",
     "keywords": "contenedor, comida, tupper, cafeteria, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -622,7 +622,7 @@
     "nombre": "Popotes y agitadores",
     "material": "Plástico",
     "submaterial": "PP",
-    "descripcion": "limpios, reunir varios",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Reúne varios juntos para evitar que se pierdan en el proceso de reciclaje.",
     "keywords": "popote, agitador, plastico, cafeteria, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -633,7 +633,7 @@
     "nombre": "Carpetas plásticas y portafolios",
     "material": "Plástico",
     "submaterial": "PP",
-    "descripcion": "limpio, sin papel",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Retira todo el papel del interior y cualquier parte metálica.",
     "keywords": "carpeta, portafolio, plastico, oficina, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -644,7 +644,7 @@
     "nombre": "Protectores de hojas",
     "material": "Plástico",
     "submaterial": "PP",
-    "descripcion": "limpios, sin papel",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Asegúrate de que no contengan hojas de papel dentro.",
     "keywords": "protector, mica, hoja, plastico, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -655,7 +655,7 @@
     "nombre": "Envases de salsa individual",
     "material": "Plástico",
     "submaterial": "PP",
-    "descripcion": "enjuagados",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Enjuágalos bien para quitar restos de alimentos.",
     "keywords": "envase, salsa, ketchup, mostaza, plastico, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -666,7 +666,7 @@
     "nombre": "Separadores de libros plásticos",
     "material": "Plástico",
     "submaterial": "PP",
-    "descripcion": "rotos o inutilizables",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Deposítalos limpios y sin etiquetas de papel adheridas.",
     "keywords": "separador, libro, plastico, utiles, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -677,7 +677,7 @@
     "nombre": "Charolas de comida corrugada",
     "material": "Plástico",
     "submaterial": "PS rígido",
-    "descripcion": "limpias, sin restos",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Retira completamente los residuos de comida antes de desechar.",
     "keywords": "charola, comida, plastico, cafeteria, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -688,7 +688,7 @@
     "nombre": "Plumas y marcadores sin tinta",
     "material": "Plástico",
     "submaterial": "",
-    "descripcion": "reunir varios",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos duros. Reúne varios bolígrafos para facilitar su acopio.",
     "keywords": "pluma, marcador, boligrafo, escritura, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -699,7 +699,7 @@
     "nombre": "Bolígrafos retráctiles",
     "material": "Plástico",
     "submaterial": "",
-    "descripcion": "reunir varios",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Si es posible, separa el resorte metálico del cuerpo plástico.",
     "keywords": "boligrafo, pluma, escritura, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -710,7 +710,7 @@
     "nombre": "Reglas y escuadras",
     "material": "Plástico",
     "submaterial": "",
-    "descripcion": "rotos o inutilizables",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Deposítalas limpias y sin pegatinas.",
     "keywords": "regla, escuadra, geometria, utiles, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -721,7 +721,7 @@
     "nombre": "Gomas de borrar",
     "material": "Plástico / Goma",
     "submaterial": "",
-    "descripcion": "reunir varias",
+    "descripcion": "Desechar en contenedor de inorgánicos. Generalmente no son reciclables, deposítalas en la basura general.",
     "keywords": "goma, borrador, utiles, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -732,7 +732,7 @@
     "nombre": "Correctores líquidos",
     "material": "Plástico",
     "submaterial": "",
-    "descripcion": "vacíos",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Asegúrate de que el envase esté vacío y seco.",
     "keywords": "corrector, liquido, utiles, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -743,7 +743,7 @@
     "nombre": "Portaminas y plumas mecánicas",
     "material": "Plástico",
     "submaterial": "",
-    "descripcion": "sin funcionar",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Retira las puntas de grafito y gomas antes de tirar.",
     "keywords": "portaminas, pluma, mecanica, utiles, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -754,7 +754,7 @@
     "nombre": "Estuches de lápices",
     "material": "Plástico / Textil",
     "submaterial": "",
-    "descripcion": "rotos o inutilizables",
+    "descripcion": "Desechar en contenedor de inorgánicos. Si es mixto, sepáralo por materiales o deséchalo en basura general si está muy dañado.",
     "keywords": "estuche, lapiz, utiles, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -765,7 +765,7 @@
     "nombre": "Fundas de celular",
     "material": "Plástico / Silicón",
     "submaterial": "",
-    "descripcion": "rotas o inutilizables",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Retira cualquier adorno o metal pegado a la funda.",
     "keywords": "funda, celular, silicona, plastico, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -776,7 +776,7 @@
     "nombre": "Envolturas de snacks limpias",
     "material": "Plástico",
     "submaterial": "Empaques flexibles laminados",
-    "descripcion": "limpios; sin grasa",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos flexibles. Deben estar completamente libres de residuos de alimentos.",
     "keywords": "envoltura, snack, galleta, sabrita, laminado, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -787,7 +787,7 @@
     "nombre": "Latas de bebidas energéticas",
     "material": "Metal",
     "submaterial": "Aluminio",
-    "descripcion": "enjuagado, compactar",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para metales. Escurre el líquido, enjuaga y compacta la lata.",
     "keywords": "lata, energetica, aluminio, bebida, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -798,7 +798,7 @@
     "nombre": "Botes de aerosol vacíos",
     "material": "Metal",
     "submaterial": "Aluminio",
-    "descripcion": "completamente vacíos",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para metales. Asegúrate de que esté totalmente vacío y no lo perfores.",
     "keywords": "aerosol, spray, lata, metal, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -809,7 +809,7 @@
     "nombre": "Clips y grapas",
     "material": "Metal",
     "submaterial": "Acero / Hojalata",
-    "descripcion": "reunir en cantidad",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para metales. Reúne una cantidad considerable en un recipiente antes de reciclar.",
     "keywords": "clip, grapa, oficina, metal, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -820,7 +820,7 @@
     "nombre": "Tijeras y sacapuntas metálicos",
     "material": "Metal",
     "submaterial": "Acero / Hojalata",
-    "descripcion": "rotos o inutilizables",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para metales. Si tienen partes plásticas, intenta separarlas o deséchalas como mixto.",
     "keywords": "tijera, sacapuntas, metal, utiles, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -831,7 +831,7 @@
     "nombre": "Espirales de cuadernos",
     "material": "Metal",
     "submaterial": "Acero / Hojalata",
-    "descripcion": "reunir varios",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para metales. Retira cualquier pedazo de papel adherido al espiral.",
     "keywords": "espiral, cuaderno, metal, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -842,7 +842,7 @@
     "nombre": "Anillos de argollas",
     "material": "Metal",
     "submaterial": "Acero / Hojalata",
-    "descripcion": "reunir varios",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para metales. Agrúpalos con otros objetos metálicos pequeños.",
     "keywords": "anillo, argolla, metal, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -853,7 +853,7 @@
     "nombre": "Tapas corona de botellas",
     "material": "Metal",
     "submaterial": "Acero / Hojalata",
-    "descripcion": "reunir varias",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para metales. Junta varias tapas en una lata vacía para evitar que se pierdan.",
     "keywords": "tapa, corona, botella, metal, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -864,7 +864,7 @@
     "nombre": "Termos y vasos térmicos",
     "material": "Plástico / Metal",
     "submaterial": "",
-    "descripcion": "rotos o inutilizables",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para metales. Separa las tapas plásticas del cuerpo metálico.",
     "keywords": "termo, vaso, termico, cafeteria, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -875,7 +875,7 @@
     "nombre": "Frascos de reactivos vacíos",
     "material": "Vidrio",
     "submaterial": "Botellas y frascos",
-    "descripcion": "enjuagado, del laboratorio",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para vidrio. Deben estar descontaminados y sin etiquetas de advertencia peligrosas.",
     "keywords": "frasco, reactivo, laboratorio, vidrio, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -886,7 +886,7 @@
     "nombre": "Vasos de vidrio rotos",
     "material": "Vidrio",
     "submaterial": "Botellas y frascos",
-    "descripcion": "embolsar con cuidado",
+    "descripcion": "Desechar en contenedor de inorgánicos. Envuelve los fragmentos en periódico grueso o cartón para proteger al recolector.",
     "keywords": "vaso, vidrio, roto, cafeteria, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -897,7 +897,7 @@
     "nombre": "Brik de jugo y leche",
     "material": "Tetra Pak",
     "submaterial": "Multicapa",
-    "descripcion": "enjuagar y compactar",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para envases multicapa. Abre las esquinas, enjuaga, escurre y aplasta.",
     "keywords": "brik, jugo, leche, tetrapak, multicapa, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -908,7 +908,7 @@
     "nombre": "Mochilas y bolsas de tela",
     "material": "Textil",
     "submaterial": "Reutilizable",
-    "descripcion": "limpias, en buen estado",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para textiles. Si están en buen estado, considera donarlas antes de desecharlas.",
     "keywords": "mochila, bolsa, textil, reutilizable, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -919,7 +919,7 @@
     "nombre": "Uniformes deportivos",
     "material": "Textil",
     "submaterial": "Reutilizable",
-    "descripcion": "limpios y doblados",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para textiles. Lávalos y sécalos bien para evitar moho en el contenedor.",
     "keywords": "uniforme, deportivo, textil, deporte, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -930,7 +930,7 @@
     "nombre": "Zapatos deportivos",
     "material": "Textil / Sintético",
     "submaterial": "Reutilizable",
-    "descripcion": "limpios, por pares",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para textiles. Ata los pares por las agujetas para mantenerlos juntos.",
     "keywords": "zapato, tenis, deportivo, textil, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -941,7 +941,7 @@
     "nombre": "Toallas y paños de limpieza",
     "material": "Textil",
     "submaterial": "Reutilizable",
-    "descripcion": "limpios y secos",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para textiles. Deben estar lavados y libres de residuos químicos agresivos.",
     "keywords": "toalla, paño, limpieza, textil, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -952,7 +952,7 @@
     "nombre": "USB y memorias flash",
     "material": "Electrónico",
     "submaterial": "RAEE pequeños",
-    "descripcion": "no funcionales",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para electrónicos. Asegúrate de borrar tus datos personales antes de desecharlas.",
     "keywords": "usb, memoria, flash, raee, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -963,7 +963,7 @@
     "nombre": "Calculadoras",
     "material": "Electrónico",
     "submaterial": "RAEE pequeños",
-    "descripcion": "retirar pilas primero",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para electrónicos. Retira las pilas y deposítalas en su contenedor correspondiente.",
     "keywords": "calculadora, raee, electronico, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -974,7 +974,7 @@
     "nombre": "Audífonos y manos libres",
     "material": "Electrónico",
     "submaterial": "RAEE pequeños",
-    "descripcion": "no funcionales",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para electrónicos. Enróllalos para que no se enreden con otros residuos.",
     "keywords": "audifono, manos libres, raee, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -985,7 +985,7 @@
     "nombre": "Celulares viejos",
     "material": "Electrónico",
     "submaterial": "RAEE pequeños",
-    "descripcion": "retirar batería si es posible",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para electrónicos. Retira la batería si es extraíble y borra tu información.",
     "keywords": "celular, telefono, raee, electronico, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -996,7 +996,7 @@
     "nombre": "Teclados y mouse",
     "material": "Electrónico",
     "submaterial": "RAEE pequeños",
-    "descripcion": "no funcionales",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para electrónicos. Corta los cables o átalos para facilitar el manejo.",
     "keywords": "teclado, mouse, raee, computadora, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -1007,7 +1007,7 @@
     "nombre": "Lámparas LED de escritorio",
     "material": "Electrónico",
     "submaterial": "RAEE pequeños",
-    "descripcion": "no funcionales",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para electrónicos. No rompas los focos o tubos para evitar liberar sustancias.",
     "keywords": "lampara, led, escritorio, raee, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -1018,7 +1018,7 @@
     "nombre": "Extensiones y multicontactos",
     "material": "Electrónico",
     "submaterial": "RAEE pequeños",
-    "descripcion": "no funcionales",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para electrónicos. Enrolla el cable firmemente antes de depositarlo.",
     "keywords": "extension, multicontacto, raee, cable, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -1029,7 +1029,7 @@
     "nombre": "Baterías de laptop",
     "material": "Batería",
     "submaterial": "Pilas/baterías",
-    "descripcion": "no abrir, cubrir terminales",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para pilas. Cubre los contactos con cinta y no intentes abrir la batería.",
     "keywords": "bateria, laptop, litio, raee, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -1040,7 +1040,7 @@
     "nombre": "Proyectores y presentadores",
     "material": "Electrónico",
     "submaterial": "RAEE pequeños",
-    "descripcion": "no funcionales",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para electrónicos. Transpórtalos con cuidado para no romper componentes internos.",
     "keywords": "proyector, presentador, laser, raee, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -1051,7 +1051,7 @@
     "nombre": "Lonas y banners publicitarios",
     "material": "Plástico (Lona)",
     "submaterial": "Lonas y banners",
-    "descripcion": "limpios, enrollados",
+    "descripcion": "Desechar en contenedor de inorgánicos o contenedor para plásticos. Retira ojales metálicos si es posible y enrolla la lona.",
     "keywords": "lona, banner, publicidad, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -1062,7 +1062,7 @@
     "nombre": "Papel film y plástico adherente",
     "material": "Plástico",
     "submaterial": "Papel film",
-    "descripcion": "usado, sin restos de comida",
+    "descripcion": "Desechar en contenedor de inorgánicos. Si está muy sucio con comida, no se puede reciclar y va a la basura común.",
     "keywords": "papel, film, plastico, cocina, no reciclable, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -1073,7 +1073,7 @@
     "nombre": "Plástico con restos de comida",
     "material": "Plástico",
     "submaterial": "Plástico con comida",
-    "descripcion": "con grasa o restos adheridos",
+    "descripcion": "Desechar en contenedor de inorgánicos. Los plásticos con grasa o comida pegada no son reciclables y deben ir a basura general.",
     "keywords": "plastico, comida, grasa, sucio, no reciclable, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -1084,7 +1084,7 @@
     "nombre": "Vasos de café encerados",
     "material": "Papel / Cera",
     "submaterial": "Vasos de café encerados",
-    "descripcion": "con recubrimiento de cera",
+    "descripcion": "Desechar en contenedor de inorgánicos. Debido al recubrimiento de cera, no se reciclan con el papel y van a basura general.",
     "keywords": "vaso, cafe, encerado, papel, no reciclable, inorganico",
     "ruta_imagen": "residuo_img.png"
   },
@@ -1095,7 +1095,7 @@
     "nombre": "Pañuelos desechables con fluidos",
     "material": "Papel",
     "submaterial": "Pañuelos con fluido",
-    "descripcion": "embolsar",
+    "descripcion": "Desechar en contenedor de inorgánicos. Por higiene, colócalos dentro de una bolsa cerrada antes de tirarlos.",
     "keywords": "pañuelo, papel, fluido, higiene, no reciclable, inorganico",
     "ruta_imagen": "residuo_img.png"
   }

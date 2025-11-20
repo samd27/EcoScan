@@ -14,6 +14,14 @@ public class GameManager : MonoBehaviour
     public CanvasGroup infoPanelCanvasGroup; // Arrastra tu "Panel_Informacion" aquí
     private Coroutine activeInfoFadeCoroutine;
 
+    [Header("UI Panel de Bienvenida")]
+    public CanvasGroup bienvenidaPanelCanvasGroup;
+    private Coroutine activeBienvenidaFadeCoroutine;
+
+    // Esta es la "llave" que guardaremos en la memoria del teléfono
+    private const string HA_ABIERTO_ANTES_KEY = "haAbiertoLaAppPorPrimeraVez";
+    // ------------------------------------
+
     void Start()
     {
         // ... (Tu código Start existente) ...
@@ -24,6 +32,25 @@ public class GameManager : MonoBehaviour
             infoPanelCanvasGroup.alpha = 0f;
             infoPanelCanvasGroup.interactable = false;
             infoPanelCanvasGroup.blocksRaycasts = false;
+        }
+
+        if (PlayerPrefs.GetInt(HA_ABIERTO_ANTES_KEY, 0) == 0)
+        {
+            // --- Es la Primera Vez ---
+            // 1. Mostrar el panel
+            ShowBienvenidaPanel(true);
+            
+            // 2. "Marcar" que ya lo abrimos
+            PlayerPrefs.SetInt(HA_ABIERTO_ANTES_KEY, 1);
+            PlayerPrefs.Save(); // Guardar los cambios en la memoria
+        }
+        else
+        {
+            // --- Ya NO es la Primera Vez ---
+            // Ocultar el panel inmediatamente, sin animación
+            bienvenidaPanelCanvasGroup.alpha = 0f;
+            bienvenidaPanelCanvasGroup.interactable = false;
+            bienvenidaPanelCanvasGroup.blocksRaycasts = false;
         }
     }
 
@@ -78,5 +105,49 @@ public class GameManager : MonoBehaviour
         activeInfoFadeCoroutine = null;
     }
 
-    // ... (Aquí sigue el resto de tu código) ...
+    public void ShowBienvenidaPanel(bool show)
+    {
+        if (activeBienvenidaFadeCoroutine != null)
+        {
+            StopCoroutine(activeBienvenidaFadeCoroutine);
+        }
+        activeBienvenidaFadeCoroutine = StartCoroutine(FadeBienvenidaPanel(show, 0.2f));
+    }
+
+    // La Corutina de animación (es un clon de las otras)
+    private IEnumerator FadeBienvenidaPanel(bool show, float duration)
+    {
+        float startTime = Time.time;
+        float startAlpha = bienvenidaPanelCanvasGroup.alpha;
+        float targetAlpha = show ? 1.0f : 0.0f;
+
+        if (show)
+        {
+            bienvenidaPanelCanvasGroup.interactable = true;
+            bienvenidaPanelCanvasGroup.blocksRaycasts = true;
+        }
+
+        while (Time.time < startTime + duration)
+        {
+            float t = (Time.time - startTime) / duration;
+            float newAlpha = Mathf.SmoothStep(startAlpha, targetAlpha, t);
+            bienvenidaPanelCanvasGroup.alpha = newAlpha;
+            yield return null;
+        }
+
+        bienvenidaPanelCanvasGroup.alpha = targetAlpha;
+
+        if (!show)
+        {
+            bienvenidaPanelCanvasGroup.interactable = false;
+            bienvenidaPanelCanvasGroup.blocksRaycasts = false;
+        }
+        activeBienvenidaFadeCoroutine = null;
+    }
+
+    public void AbrirPaginaWeb(string url)
+    {
+        // Esta es la línea mágica que abre el navegador del celular
+        Application.OpenURL(url);
+    }
 }
